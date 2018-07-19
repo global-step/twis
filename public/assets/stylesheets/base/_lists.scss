@@ -1,0 +1,27 @@
+// ------------------------------------------------------------
+// Lists
+// ------------------------------------------------------------
+
+// Universal Rules
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+  li{
+    margin-left: 1em;
+    padding-left: 1em;
+  }
+}
+
+// Definition Lists
+dl{
+  margin-left: 0;
+  padding-left: 0;
+  dt {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  dd {
+    margin: 0 0 1.5em 0;
+  }
+}

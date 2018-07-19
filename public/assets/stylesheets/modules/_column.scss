@@ -1,0 +1,96 @@
+// ------------------------------------------------------------
+// Column
+// ------------------------------------------------------------
+
+.column {
+  @include bottom-spacing();
+  .text{
+    padding: 0 40px;
+    @include mq($from: medium){
+      padding: 0;
+    }
+    h2{
+      text-transform: uppercase;
+      @include font-size(24px);
+    }
+  }
+
+  // Pull Quote
+  .pull{svg {display: none;}}
+
+  // Infographic
+  .infographic{
+    text-align: center;
+    .circle-digit{
+      width: 175px;
+      height: 175px;
+      border-radius: 9999em;
+      line-height: 175px;
+      text-align: center;
+      margin: 24px auto;
+
+      @include font-size(100px);
+    } 
+    .info{
+      @include caps();
+      @include font-size(12px);
+      padding: 0 10px;
+    }
+  }
+
+  @include mq($from: large) {
+    width: span(12);
+    margin-left: auto;
+    margin-right: auto;
+    @include clearfix();
+
+    // Text
+    .text{
+      width: span(4 of 12);
+      float: left;
+      &.wide{width: span(6 of 12);}
+    }
+    
+    // Pull
+    .pull{
+      width: span(7 of 12);
+      float: right;
+      .bodymovin{
+        position: absolute;
+        top: -250px;
+        right: -244px;
+        width: 400px;
+        svg{
+          position: relative;
+          top: initial;
+          right: initial;
+        }
+      }
+      svg{
+        width: 291px;
+        height: 291px;
+        display: block;
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        z-index: 10;
+      }
+      p{position: relative;z-index: 20;}
+    }
+
+
+    // Image
+    .image {
+      width: span(7 of 12);
+      float: right;
+    }
+
+    // Infographic
+    .infographic{
+      display: block;
+      width: span(3 of 12);
+      float: left;
+      margin-left: span(1 of 12);
+    }
+  }
+}

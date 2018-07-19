@@ -1,0 +1,30 @@
+// ------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------
+
+.page{
+  position: relative;
+  background-color: $light;
+  @include mq($from: medium) {
+    border: solid 10px $light;
+  }
+  @include mq($from: large) {
+    border: solid 20px $light;
+  }
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin content-wrapper{
+  @include mq($from: medium) {
+    width: span(14);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content-wrapper{
+  @include content-wrapper();
+  @include bottom-spacing();
+}

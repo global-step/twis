@@ -1,0 +1,130 @@
+// ------------------------------------------------------------
+// Settings
+// ------------------------------------------------------------
+
+// Vars
+// ------------------------------------------------------------
+
+// Brand Colours
+$red: #AD0A40;
+$dark-red: #48001D;
+$light-grey: #B6ADAA;
+$lighter-grey: #F1EFEE;
+$yellow: #F4C900;
+$orange: #E7732F;
+$green: #BEBE32;
+$blue: #009DBC;
+$dark-grey: #726865;
+$mustard: #FAA61A;
+$dark-orange: #5D250F;
+$dark-green: #1E3100;
+$dark-blue: #003A44;
+$darker-grey: #B7ADAA;
+$beige-grey: #DBD3D1;
+
+// Site Colours
+$light: #fff;  // White
+$dark: #000;   // Black
+$main: $red;
+$error: #f00;     // Red
+$border: #999;    // Grey
+
+$twitter: #55acee;   // Twitter
+$facebook: #3b5998;  // Facebook
+$instagram: #8a3ab9; // Instagram
+$linkedin: #007bb5;  // Linkedin
+$pinterest: #cb2027;  // Pinterest
+$googleplus: #dd4b39;  // Google+
+
+
+// Typography
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Border
+$base-border: 1px solid $border;
+
+// Other Sizes
+$border-radius: 3px;
+$base-spacing: 60px;
+$small-spacing: 40px;
+
+// Animations
+$base-duration: 0.3s;
+$base-timing: linear;
+
+$fast: 0.3s;
+$slow: 0.6s;
+$slower: 0.9s;
+
+// Layout
+$max-width: 1800px;
+
+// Media Query Settings
+// ------------------------------------------------------------
+$mq-responsive: true;
+$mq-breakpoints: (
+  small:  320px,
+  medium: 768px,
+  large:  1024px,
+  large-mid: 1200px,
+  extra-large:  1400px,
+);
+
+@import '../../../node_modules/sass-mq/mq';
+
+// Grid Settings
+// ------------------------------------------------------------
+
+$susy: (
+  'columns': susy-repeat(16),
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+  'gutters' : 0,
+);
+
+// Mixins
+// ------------------------------------------------------------
+
+
+@mixin font-size($size){
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:after{
+  content:"";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: ($height / $width) * 100%;
+  }
+}
+
+@mixin list-style-none{
+  padding: 0;
+  margin: 0;
+  &:before{display: none;}
+}
+
+@mixin caps{
+  @include font-bold();
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin bottom-spacing{
+  margin-bottom: 40px;
+  @include mq($from: medium) {
+    margin-bottom: 120px;
+  }
+}
+
+
+
+// Helper Classes
+// ------------------------------------------------------------
+.screen-reader-text{display: none;}

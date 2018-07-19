@@ -1,0 +1,132 @@
+// ------------------------------------------------------------
+// Header
+// ------------------------------------------------------------
+
+
+.main-nav{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($dark-red, 0.97);
+  z-index: 100;
+  overflow: auto;
+  padding-top: 40px;
+
+
+  .menu-title{
+    display: block;
+    position: fixed;
+    top: 17px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    z-index: 100;
+    svg{fill: $light;transition: fill $base-duration $base-timing;}
+    .icon-logo-dims{display: none;}
+    .icon-logo-a-dims{
+      width: 45px;
+      height: 45px;
+    }
+
+    @include mq($from: medium) {
+      top: 80px;
+      left: 90px;
+      width: 145px;
+      height: 65px;
+      .icon-logo-dims{
+        display: block;
+        width: 145px;
+        height: 65px;
+      }
+      .icon-logo-a-dims{display: none;}
+    }
+
+    @include mq($from: medium) {
+      top: 90px;
+      left: 100px;
+    }
+
+  }
+
+
+
+
+
+  .main-nav__page{
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-nav__wrap{
+    padding: 0 20px 50px;
+    break-inside: avoid-column;
+    margin-top: 40px;
+    position: relative;
+  }
+  .book{
+    position: absolute;
+    left: -10em;
+    top: 11em;
+    display: none;
+    .icon-menu-dims{opacity: 1; width: 60px; height: 46px;}
+  }
+  a{
+    color: $light;
+    display: block;
+    width: 100%;
+    @include font-size(14px);
+    @include font-medium();
+    &:hover{color: $red !important;}
+    span{
+      color: $red;
+      display: block;
+      @include caps();
+      @include font-size(12px);
+    }
+    margin-bottom: 20px;
+  }
+
+
+  @include mq($from: medium) {
+    .main-nav__wrap{
+      width: span(14);
+      margin: 0 auto;
+      padding: 170px 20px 0 20px;
+      columns: 2;
+      a{
+        @include font-size(18px);
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 40px;
+        span{margin-bottom: 35px;}
+      }
+    }
+  }
+  @include mq($from: large) {
+    .main-nav__page{
+      padding-left: 15%;
+    }
+    .book{display: block;}
+    .main-nav__wrap{
+      columns: 4;
+    }
+  }
+}
+
+
+// Body.open
+body.open{
+  overflow: hidden;
+  .site-title svg{fill: $light !important;}
+  .icon-close-dims{opacity: 1;}
+  .icon-menu-dims{opacity: 0;}
+  .book{
+    .icon-menu-dims{opacity: 1; width: 60px; height: 46px;}
+  }
+}

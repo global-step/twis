@@ -1,0 +1,91 @@
+# OS Files
+#===================================
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+.svn
+.cvs
+*.bak
+*.swp
+
+# Dist
+#===================================
+www
+
+# SASS
+#===================================
+.sass-cache
+
+# Node
+#===================================
+npm-debug.log
+node_modules
+
+# Bower
+#===================================
+bower_components
+
+# Sublime
+#===================================
+*.sublime-project
+*.sublime-workspace
+
+# Compiled source
+#===================================
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+#===================================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+#===================================
+*.log
+*.sql
+*.sqlite
+
+
+# Large / Disallowed File Types
+# (a CDN should be used for these)
+#===================================
+*.hqx
+*.bin
+*.deb
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mpg
+*.mov
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi

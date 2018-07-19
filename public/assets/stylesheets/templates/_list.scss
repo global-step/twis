@@ -1,0 +1,25 @@
+// ------------------------------------------------------------
+// List
+// ------------------------------------------------------------
+
+body.list{
+  .hero{overflow: hidden;@include bottom-spacing();}
+  .hero .icon-num-10-dims{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 45%;
+    right: -20%;
+    transform: translate3D(0, -50%, 0);
+    z-index: 5;
+  }
+}
+
+
+body.ten-money-making-hobbies {
+  #icon-animated-magnify-yellow{
+    @include mq($from: extra-large){
+      bottom: -118px;
+    }
+  }
+}

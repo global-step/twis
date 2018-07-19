@@ -1,0 +1,81 @@
+// ------------------------------------------------------------
+// Pull
+// ------------------------------------------------------------
+
+.pull{
+  @include blockPadding();
+  position: relative;
+  p {
+    @include font-size(26px);
+    @include font-light();
+    position: relative;
+    z-index: 10;
+  }
+  svg{display: none;}
+  @include mq($from: medium){
+    p{@include font-size(36px);}
+    svg{
+      display: block;
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      z-index: 5;
+      width: 217px;
+      height: 213px;
+    }
+    #icon-animated-hands-heart{
+      position: absolute;
+      top: -400px;
+      right: -400px;
+      width: 550px;
+      height: 550px;
+      svg{
+        position: relative;
+        top: initial; right: initial;
+      }
+    }
+  }
+}
+
+
+// Pensions
+#pensions{
+  .inner{
+    @include blockPadding();
+    text-align: center;
+    position: relative;
+    h2{margin: 0;}
+    .bodymovin{
+      display: static;
+      width: 230px;
+      margin: 0 auto;
+    }
+  }
+  @include mq($from: medium){
+    .inner{
+      text-align: left;
+      @include clearfix()
+      h2{
+        float: right;
+        width: span(8 of 14);
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%);
+        @include font-size(36px);
+      }
+      .bodymovin{
+        float: left;
+        width: span(4 of 14);
+      }
+    }
+  }
+
+  @include mq($from: large-mid){
+    .inner{
+      padding: 60px span(2 of 14);
+      h2{@include font-size(48px);}
+    }
+  }
+
+}

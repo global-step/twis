@@ -1,0 +1,80 @@
+// ------------------------------------------------------------
+// Froms
+// ------------------------------------------------------------
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 700;
+  margin-bottom: $base-spacing;
+  padding: 0;
+}
+
+label {
+  color: $dark;
+  font-weight: 700;
+}
+
+input,
+select {
+  display: block;
+  @include font-size($base-font-size);
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+select {
+  border: $base-border;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: $main;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+}
+
+textarea {resize: vertical;}
+
+[type="search"] {appearance: none;}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $base-spacing;
+}
+
+[type="file"] {
+  margin-bottom: $base-spacing;
+  width: 100%;
+}
+
+.required {color: $main;}

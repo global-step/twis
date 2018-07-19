@@ -1,0 +1,110 @@
+// ------------------------------------------------------------
+// Hero
+// ------------------------------------------------------------
+
+.hero{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 395px;
+  padding-top: 425px;
+
+  &:before{
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $light;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.6s ease-in;
+    z-index: 20;
+  }
+
+  .read-time{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate3D(-50%, 0, 0);
+    z-index: 10;
+  }
+
+  .mag-title{
+    @include caps();
+    @include font-size(16px);
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translate3D(-50%, 0, 0);
+  }
+
+  .hero__content{
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    width: span(14 of 14);
+    z-index: 10;
+    position: relative;
+    margin: 0 auto;
+    h1 {@include font-size(36px);}
+    p{@include font-size(14px);}
+  }
+
+  @include mq($from: medium) {
+    background-size: cover;
+    min-height: auto;
+    padding-top: 0;
+    @include aspect-ratio(3,4);
+    .hero__content{
+      width: 54%;
+      top: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translate3D(-50%, -50%, 0);
+      display: block;
+      padding: 0;
+      .mag-title{position: static;transform: translate3D(0, 0, 0);margin-bottom: 25px; top: 280px;}
+      h1 {@include font-size(36px);margin-bottom: 20px;line-height: 1.3em;}
+    }
+
+    
+  }
+
+  @include mq($from: large) {
+    @include aspect-ratio(4, 2.5);
+  }
+  @include mq($from: extra-large) {
+     @include aspect-ratio(16, 9);
+     .hero__content{
+        h1 {@include font-size(63px);}
+        p{@include font-size(16px);}
+     }
+  }
+}
+
+
+// 404
+.hero--404{
+  overflow: hidden;
+  svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  @include mq($from: large){
+    svg{
+      width: 621px;
+      height: 894px;
+      top: 60px;
+      right: -160px;
+    }
+  }
+}

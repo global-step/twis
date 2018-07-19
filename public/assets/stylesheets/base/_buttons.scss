@@ -1,0 +1,58 @@
+// ------------------------------------------------------------
+// Buttons
+// ------------------------------------------------------------
+@mixin button($type:default){
+  appearance: none;
+  background-color: $main;
+  border: solid 2px $main;
+  color: $light;
+  cursor: pointer;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  line-height: 46px;
+  height: 50px;
+  padding: 0 40px;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: background-color $base-duration $base-timing, color $base-duration $base-timing, border $base-duration $base-timing;
+  text-align: center;
+  display: inline-block;
+  border-radius: 999em;
+  @include font-medium();
+  @include font-size(14px);
+
+  &:hover {
+    background-color: $dark;
+    border-color: $dark;
+    color: $light;
+  }
+
+  @if $type == outline {
+    background-color: transparent;
+    color: $main;
+    &:hover{
+      background-color: $dark;
+      border-color: $dark;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+  @include button
+}
+
+.btn-outline{
+  @include button(outline);
+}

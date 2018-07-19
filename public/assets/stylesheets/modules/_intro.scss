@@ -1,0 +1,46 @@
+// ------------------------------------------------------------
+// Intro
+// ------------------------------------------------------------
+.intro{
+  padding: span(1 of 16);
+  .lead-in{@include font-size(24px);}
+  p{@include font-size(14px);}
+  @include bottom-spacing();
+
+  @include mq($from: medium) {
+    @include clearfix();
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
+
+
+// Full Width
+// ------------------------------------------------------------
+.intro--full-width{
+  width: 100%;
+  @include mq($from: medium) {
+    margin-left: auto;
+    margin-right: auto;
+    p.lead-in{
+      @include font-size(36px);
+      width: span(9 of 14);
+      margin-right: span(1 of 14);
+      font-weight: 100;
+    }
+    p{@include font-size(16px);float: left;width: span(4 of 14);}
+
+  }
+}
+
+// Half Width
+// ------------------------------------------------------------
+.intro--half-width{
+  @include mq($from: medium) {
+    width: span(8 of 14);
+    margin-left: span(1);
+    p{@include font-size(36px);}
+  }
+}

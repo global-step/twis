@@ -1,0 +1,31 @@
+// ------------------------------------------------------------
+// Elements
+// ------------------------------------------------------------
+html {box-sizing: border-box;}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $lighter-grey;
+  color: $dark;
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 0 0 $base-spacing 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a img{outline: 0;}

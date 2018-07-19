@@ -1,0 +1,48 @@
+// ------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------
+
+footer.site-footer{
+  color: $light;
+  background-color: $dark-red;
+  padding: 60px span(1 of 16);
+  position: relative;
+  overflow: hidden;
+  .icon-logo-dims{
+    fill: $light;
+    width: 145px;
+    height: 65px;
+    margin-bottom: 30px;
+  }
+
+  p{z-index: 10;position: relative;}
+  
+
+  p.legal{
+    @include font-size(12px);
+    @include font-light();
+  }
+
+  a{
+    color: $yellow;
+    &:hover{color: $mustard;}
+  }
+
+  .icon-logo-a-dims{
+    display: none;
+  }
+
+  @include mq($from: medium){
+    .icon-logo-a-dims{
+      display: block;
+      position: absolute;
+      top: -35px;
+      right: -30px;
+      fill: $red;
+      height: 408px;
+      z-index: 5;
+      width: auto;
+    }
+  }
+
+}

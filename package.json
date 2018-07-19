@@ -1,0 +1,21 @@
+{
+  "name": "aspire_magazine",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "description": "Magazine Site for aspire",
+  "license": "SimPL-2.0",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-cache": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "*",
+    "gulp-svg-sprite": "*",
+    "gulp-uglify": "^3.0.0",
+    "sass-mq": "^3.3.2",
+    "susy": "^3.0.0"
+  }
+}
