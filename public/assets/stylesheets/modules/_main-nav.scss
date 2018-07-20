@@ -2,7 +2,6 @@
 // Header
 // ------------------------------------------------------------
 
-
 .main-nav{
   position: relative;
   display: inline-block;
@@ -12,6 +11,7 @@
   z-index: 100;
   overflow: auto;
   padding-left: 230px;
+  overflow: visible;
 
   .main-nav__page{
     // max-width: $max-width;
@@ -22,54 +22,96 @@
   .main-nav__wrap{
     position: relative;
   }
-  p{
+  .subBG{
+    opacity: 0;
+    height: 0;
+    position: fixed;
+    background: rgba(47,164,189,0.94);
+    top: 120px;
+    left: 0;
+    width: 100%;
+    transition: $base-duration $base-timing;
+  }
+  .nav-item{
     display: inline-block;
     vertical-align: top;
-    padding: 48px 20px 48px;
     position: relative;
     margin: 0 -5px 0 0;
+    z-index: 1;
     @include font-bold();
     cursor: pointer;
-    transition: $base-duration $base-timing;
-    &:hover{color: $lightblue !important;}
-  }
-  // direction aware hover
-  p:before {
-    left: 100%;
-    transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    content: '';
-    height: 100%;
-    border-bottom: 5px solid $lightblue;
-    bottom: 0;
-    position: absolute;
-    width: 0;
-    z-index: 11;
-  }
-  p:hover:before, {
-    border-bottom-color: $lightblue;
-    width: 100%;
-    top: 0;
-    transition-delay: 0.1s;
-    left: 0;
-  }
-  p:hover ~ p:before {
-    left: 0;
-  }
-  // direction aware hover end
-
-  .nav-item{display: none;}
-  a{
-    // color: $light;
-    display: block;
-    width: 100%;
-    @include font-size(14px);
-    @include font-medium();
-    &:hover{
-      color: $lightblue !important;
-    
+    transition: color $base-duration $base-timing;
+    p{
+      margin: 0;
+      padding: 48px 20px 48px;
     }
-    margin-bottom: 20px;
+    // direction aware hover
+    p:before {
+      left: 50%;
+      transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+      content: '';
+      height: 100%;
+      border-bottom: 5px solid $lightblue;
+      bottom: 0;
+      position: absolute;
+      width: 0;
+      z-index: 11;
+    }
+    p:hover:before, {
+      border-bottom-color: $lightblue;
+      width: 100%;
+      top: 0;
+      transition-delay: 0.1s;
+      left: 0;
+    }
+    // p:hover ~ p:before {
+    //   left: 0;
+    // }
+    // direction aware hover end
+
+    .sub{
+      pointer-events: none;
+      opacity: 0;
+      bottom: -155px;
+      padding: 80px 150px 30px 250px;
+      top: 120px;
+      height: 30vh;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      transition: opacity $base-duration $base-timing;
+      display: flex;
+      justify-content: space-between;
+      a{
+        font-size: 24px;
+        color: #fff;
+        &:hover{cursor: pointer;}
+      }
+    }
+    &:hover{
+      .sub{
+        pointer-events: all;
+        opacity: 1;
+      }
+      ~.subBG{
+        height: 30vh;
+        opacity: 1;
+      }
+    }
   }
+  
+  // a{
+  //   // color: $light;
+  //   display: block;
+  //   width: 100%;
+  //   @include font-size(14px);
+  //   @include font-medium();
+  //   &:hover{
+  //     color: $lightblue !important;
+    
+  //   }
+  //   margin-bottom: 20px;
+  // }
   .menu-toggle {
     position: absolute;
     top: 0px;
@@ -103,10 +145,7 @@
       // width: span(14);
       margin: 0 auto;
       a{
-        @include font-size(18px);
-        display: inline-block;
-        vertical-align: top;
-        padding-right: 40px;
+       
       }
     }
   }
