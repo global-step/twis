@@ -1,10 +1,10 @@
 {
   "globals": {
-    "name"  : "Aspire Magazine",
-    "date"  : "Issue One",
-    "title" : "Aspire Magazine",
-    "url"   : "http://whatsnext.psaspire.com/issue-one",
-    "description"   : "Aspire Magazine",
+    "name"  : "Tokyo West",
+    "date"  : "International School",
+    "title" : "Tokyo West",
+    "url"   : "",
+    "description"   : "Tokyo West",
    
     "bodyclass": "home",
     "template": "default",

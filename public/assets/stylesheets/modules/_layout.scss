@@ -6,12 +6,12 @@
   position: relative;
   background-color: $light;
   @include mq($from: medium) {
-    border: solid 10px $light;
+    // border: solid 10px $light;
   }
   @include mq($from: large) {
-    border: solid 20px $light;
+    // border: solid 20px $light;
   }
-  max-width: $max-width;
+  // max-width: $max-width;
   width: 100%;
   margin: 0 auto;
 }

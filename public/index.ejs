@@ -1,19 +1,12 @@
 <div class="hero heading--white text--white svg--white" style="background-image: url('/assets/images/<%- bodyclass %>/hero.jpg');">
-  <img src="/assets/images/home/animated_candle1.png" />
   <div class="hero__content">
-    <h1><%= heroTitle %></h1>
-    <p><%= heroDesc %></p>
-    <p><%= date %></p>
+    <h2>“Providing the foundations and opportunities for the next generation to pursue their dreams.”</h2>
   </div>
 </div>
 
 <div class="content-wrapper">
 
   <div class="feature row" id="ready">
-    <video autoplay loop id="home-1">
-      <source src="/assets/videos/aspire-landing-video-1.webm" type="video/webm"></source>
-      <source src="/assets/videos/aspire-landing-video-1.mp4" type="video/mp4"></source>
-    </video>
     
     <a class="text background--dark-blue text--white heading--white svg--blue" href="/articles/are-you-ready-for-a-longer-life">
       
@@ -40,11 +33,6 @@
 
   <div class="feature longer row heading--orange" id="longer">
   	<h2 class="medium-up"><%- homeTwoTitle %></h2>
-  	
-    <video autoplay loop id="home-2">
-      <source src="/assets/videos/aspire-landing-video-2.webm" type="video/webm"></source>
-      <source src="/assets/videos/aspire-landing-video-2.mp4" type="video/mp4"></source>
-    </video>
 
     <p class="read-time svg--darker-grey text--darker-grey">
       <svg class="icon icon-read-time-ring-dims">
@@ -68,37 +56,6 @@
 
   </div>
 
-
-  <div class="feature row" id="choices">
-    
-    <a class="text background--red text--white heading--white svg--white" href="/articles/a-few-good-choices">
-     
-      <p class="read-time text--white svg--white">
-        <svg class="icon icon-read-time-ring-dims">
-          <use xlink:href="#read-time-ring"></use>
-        </svg>
-        <span data-figure="<%- homeVideoTime %>" data-speed="1000">0</span>
-        <span>mins</span>
-      </p>
-
-      <div class="text-wrap">
-        <p class="mobile-only mobile-read text--blue"><%- homeVideoTime %> Mins</p>
-        <h2><%- homeVideoTitle %></h2>
-        <p><%- homeVideoDesc %></p>
-        <span class="read-more"> 
-          <svg class="icon icon-read-more-dims"> <use xlink:href="#read-more"></use> </svg>
-          <span>Read</span>
-        </span>
-      </div>
-    </a>
-
-    <video autoplay loop id="home-video">
-      <source src="/assets/videos/aspire-landing-video-1.webm" type="video/webm"></source>
-      <source src="/assets/videos/aspire-landing-video-1.mp4" type="video/mp4"></source>
-    </video>
-    
-  </div>
-
   <a href="/articles/when-can-i-retire" class="pull-full row background--lighter-grey" id="retire">
     <div class="inner heading--red svg--dark-red text--dark-red">
 
@@ -118,7 +75,6 @@
           <span>Read</span>
       </div>
     </div>
-    <div id="icon-animated-people" class="bodymovin" data-bm-type="svg" data-animation-path="/assets/javascripts/animations/icon-animated-people-yellow.json"></div>
   </a>
 
   <div class="offset-blocks row" id="better">
@@ -127,7 +83,6 @@
     	  <svg class="icon icon-num-5-dims"> <use xlink:href="#num-5"></use> </svg>
     	</div>
     	<a href="/articles/five-things-that-get-better-with-age">
-    
       <p class="read-time svg--white text--white">
         <svg class="icon icon-read-time-ring-dims">
           <use xlink:href="#read-time-ring"></use>
@@ -162,59 +117,6 @@
     </div>
   </div>
 
-  <div class="offset-blocks list row" id="new-ideas">
-	  <div class="list-item list-item--photo heading--white">
-      <video autoplay loop id="home-3">
-        <source src="/assets/videos/aspire-landing-video-3.webm" type="video/webm"></source>
-        <source src="/assets/videos/aspire-landing-video-3.mp4" type="video/mp4"></source>
-      </video>
-		    <div class="text background--blue text--white link--white heading--dark-blue">
-		      <a href="/articles/ten-new-ideas-about-to-change-your-life">
-          <p class="read-time svg--white text--white">
-            <svg class="icon icon-read-time-ring-dims">
-              <use xlink:href="#read-time-ring"></use>
-            </svg>
-            <span data-figure="<%- homeSixTime %>" data-speed="1000">0</span>
-            <span>mins</span>
-          </p>
-		      <p class="mobile-only mobile-read text--white"><%- homeSixTime %> Mins</p>
-		      <h2><%- homeSixTitle %></h2>
-		      <p><%- homeSixDesc %></p>
-		      <div class="read-more svg--yellow text--yellow">
-		      	<svg class="icon icon-read-more-dims"> <use xlink:href="#read-more"></use></svg><span>Read</span>
-		      </div>
-		      </a> 	
-		    </div>
-	  </div>
-
-	  <div class="list-item list-item--photo">
-      <video autoplay loop id="home-4">
-        <source src="/assets/videos/aspire-landing-video-4.webm" type="video/webm"></source>
-        <source src="/assets/videos/aspire-landing-video-4.mp4" type="video/mp4"></source>
-      </video>	    
-		    <div class="text background--green text--dark-green heading--dark-green">
-		    <a href="/articles/ten-money-making-hobbies">
-        
-          <p class="read-time svg--white text--white">
-            <svg class="icon icon-read-time-ring-dims">
-              <use xlink:href="#read-time-ring"></use>
-            </svg>
-            <span data-figure="<%- homeSevenTime %>" data-speed="1000">0</span>
-            <span>mins</span>
-          </p>
-
-		      <p class="mobile-only mobile-read text--white"><%- homeSevenTime %> Mins</p>
-		      <h2><%- homeSevenTitle %></h2>
-		      <p><%- homeSevenDesc %></p>
-		      <div class="read-more svg--white text--white">
-			      <svg class="icon icon-read-more-dims"> <use xlink:href="#read-more"></use></svg><span>Read</span>
-		      </div>
-		      </a>
-		    </div>
-		
-	  </div>
-  </div>
-
   <div class="pull-full row background--lighter-grey" id="future">
 	<a href="/articles/the-retirement-of-the-future">
     <div class="inner heading--red svg--dark-red text--dark-red">
@@ -233,9 +135,6 @@
         <span data-figure="<%- homeEightTime %>" data-speed="1000">0</span>
         <span>mins</span>
       </p>
-	    <div class="svg--orange svg-wrap">
-	    	<div id="icon-animated-rocket" class="bodymovin" data-bm-type="svg"  data-animation-path="/assets/javascripts/animations/icon-animated-rocket.json"></div>
-	    </div>
 	 </a>
   </div>
 
@@ -330,11 +229,6 @@
 
   <div class="feature feature-solid row" id="friendship">
 
-    <video autoplay loop id="home-5">
-      <source src="/assets/videos/aspire-landing-video-5.webm" type="video/webm"></source>
-      <source src="/assets/videos/aspire-landing-video-5.mp4" type="video/mp4"></source>
-    </video>
-
 	  <a href="/articles/meet-the-new-friendship-groups" class="text background--dark-orange text--white heading--mustard svg--mustard">
 
       <p class="read-time svg--white">
@@ -356,59 +250,6 @@
 	    </div>
 	  </a>
 
-  </div>
-
-
-  <div class="offset-blocks list row" id="multigen">
-    <div class="list-item list-item--photo">
-      <video autoplay loop id="home-6">
-        <source src="/assets/videos/aspire-landing-video-6.webm" type="video/webm"></source>
-        <source src="/assets/videos/aspire-landing-video-6.mp4" type="video/mp4"></source>
-      </video>
-      
-  	    <div class="text background--orange text--white heading--white">
-        <a href="/articles/ten-benefits-from-multigenerational-friendships">
-          <p class="read-time svg--white text--white">
-            <svg class="icon icon-read-time-ring-dims">
-              <use xlink:href="#read-time-ring"></use>
-            </svg>
-            <span data-figure="<%- homeFourteenTime %>" data-speed="1000">0</span>
-            <span>mins</span>
-          </p>
-  	      <p class="mobile-only mobile-read text--white"><%- homeFourteenTime %> Mins</p>
-  	      <h2><%- homeFourteenTitle %></h2>
-  	      <p><%- homeFourteenDesc %></p>
-  	      <div class="read-more svg--red text--red">
-  	      	<svg class="icon icon-read-more-dims"> <use xlink:href="#read-more"></use></svg><span>Read</span>
-  	      </div>
-          </a>
-  	    </div>
-  	
-    </div>
-    <div class="block heading--white top-push" style="background-image: url('/assets/images/<%- bodyclass %>/a-rough-guide.jpg')">
-      	<a href="/articles/a-rough-guide-to-workplace-savings">
-          <p class="read-time svg--white text--white">
-            <svg class="icon icon-read-time-ring-dims">
-              <use xlink:href="#read-time-ring"></use>
-            </svg>
-            <span data-figure="<%- homeFifteenTime %>" data-speed="1000">0</span>
-            <span>mins</span>
-          </p>
-    	    	<p class="mobile-only mobile-read text--white"><%- homeFifteenTime %> Mins</p>
-    	    	<h2><%- homeFifteenTitle %></h2>
-    	    	<div class="svg--yellow text--yellow read-more">
-    	    		<svg class="icon icon-read-more-dims"> <use xlink:href="#read-more"></use></svg><span>Read</span>
-    	      	</div>
-        </a>
-     </div>
-  </div>
-
-
-  <div class="pull-full row background--lighter-grey" id="pensions">
-    <div class="inner heading--red svg--dark-red text--dark-red">
-      <h2><%- homeFinalTitle %></h2>
-      <div id="icon-animated-rabbit" class="bodymovin" data-bm-type="svg"  data-animation-path="/assets/javascripts/animations/icon-animated-rabbit.json"></div>
-    </div>
   </div>
   
 </div>

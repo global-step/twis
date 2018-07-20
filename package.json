@@ -1,14 +1,14 @@
 {
-  "name": "aspire_magazine",
+  "name": "twis",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "#"
   },
-  "description": "Magazine Site for aspire",
+  "description": "Tokyo West Middle/Elementary",
   "license": "SimPL-2.0",
   "devDependencies": {
-    "gulp": "*",
+    "gulp": "^4.0.0",
     "gulp-cache": "*",
     "gulp-load-plugins": "*",
     "gulp-notify": "^3.0.0",
@@ -17,5 +17,11 @@
     "gulp-uglify": "^3.0.0",
     "sass-mq": "^3.3.2",
     "susy": "^3.0.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.4",
+    "create-next-app": "^0.5.3",
+    "harp": "^0.25.0",
+    "npm": "^6.2.0"
   }
 }

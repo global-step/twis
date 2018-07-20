@@ -1,6 +1,6 @@
-# Aspire Magazine
+# Tokyo West Middle/Elementary
 
-The Aspire Magazine is built using [Harp](http://harpjs.com/docs/), a JS based static site generator.
+Built using [Harp](http://harpjs.com/docs/), a JS based static site generator.
 
 ## Dev Dependecies
 
@@ -17,7 +17,7 @@ With this project, we're using some specific features that Harp provides, in-par
 * Partials
 It's worth catching up on the [Harp Docs](http://harpjs.com/docs/) in these subjects.
 
-## Qucik Setup
+## Quick Setup
 * Install NPM: https://www.npmjs.com/get-npm
 * Install Harp: `sudo npm install -g harp`
 * Clone repo
@@ -28,7 +28,7 @@ It's worth catching up on the [Harp Docs](http://harpjs.com/docs/) in these subj
 * Profit!
 
 ## File structure
-A breif overview of file structure, and some of the files you'll need to edit.
+A brief overview of file structure, and some of the files you'll need to edit.
 ```
 aspire-magazine/
   ├ harp.json 
@@ -59,10 +59,10 @@ aspire-magazine/
         └ index.ejs
 ```
 
-To keep things organised, there are  few rules.
+To keep things organised, there are few rules.
 
 * All icons kept in the `/public/assets/images/icons` folder and made as a sprite (details bellow)
-* Each artilce in `/public/articles` has a corisponding folder in images: e.g `/public/articles/article-one.ejs` and `/public/assets/images/article-one/hero.png`
+* Each article in `/public/articles` has a corresponding folder in images: e.g `/public/articles/article-one.ejs` and `/public/assets/images/article-one/hero.png`
 * Images for general articles follow the patern `image-1.jpg`, `image-2.jpg`, `image-3.jpg` etc
 * Images for lists follow the patern `item-1.jpg`, `item-3.jpg`, `item-6.jpg` etc
 * Hero images are always called `hero.jpg`.
@@ -72,7 +72,7 @@ This way we can use metadata variables to make development quicker.
 ## Development
 
 ### SCSS and JS
-Harp automaticaly compiles SCSS and JS files. As long as `haro server` is running, they should just work.
+Harp automaticaly compiles SCSS and JS files. As long as `harp server` is running, they should just work.
 
 #### Utilitiy Classes
 There are some basic utilitiy classes added to help speed development, mostly for colour blocks.

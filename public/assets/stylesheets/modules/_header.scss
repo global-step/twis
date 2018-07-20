@@ -3,100 +3,25 @@
 // ------------------------------------------------------------
 
 .site-title {
-  display: block;
   position: absolute;
-  top: 17px;
-  left: 20px;
-  width: 45px;
-  height: 45px;
-  z-index: 100;
+  padding-left: 40px;
+  box-sizing: content-box;
+  width: 145px;
+  z-index: 101;
+  margin: 0;
   a{
     margin-bottom: 0;
     display: block;
-    &:hover{svg{fill: $red;}}
-    svg{fill: $light;transition: fill $base-duration $base-timing;}
-    .icon-logo-dims{display: none;}
-    .icon-logo-a-dims{
-      width: 45px;
-      height: 45px;
-    }
   }
-
   @include mq($from: medium) {
-    top: 70px;
-    left: 80px;
-    width: 145px;
-    height: 65px;
-
-    a{
-      .icon-logo-dims{
-        display: block;
-        width: 145px;
-        height: 65px;
-      }
-      .icon-logo-a-dims{display: none;}
-    }
+    
   }
 }
-
-
-
 
 header.site-header{
   position: fixed;
-  max-width: 1575px;
-  width: 87.5%;
+  width: 100%;
   margin: 0 auto;
-  height: 20px;
   z-index: 100;
   top: 0;
-  left: 50%;
-  transform: translate3D(-50%, 0, 0);
-}
-
-.menu-toggle {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  display: block;
-  width: 44px;
-  height: 71px;
-  cursor: pointer;
-  z-index: 90;
-  background-image: url("/assets/images/menu-tab.svg");
-  background-size: 44px 71px;
-  background-repeat: no-repeat;
-  &:hover{svg{fill: $red;}}
-  svg{
-    position: absolute;
-    fill: $light;
-    z-index: 20;
-    transition: all $base-duration $base-timing;
-    bottom: 24px;
-    left: 8px;
-    width: 30px;
-    height: 23px;
-  }
-
-  .icon-close-dims{
-    opacity: 0;
-    left: 9px;
-    width: 25px;
-    height: 31px;
-    bottom: 25px;
-  }
-
-  @include mq($from: medium) {
-    right: 12px;
-    width: 66px;
-    height: 90px;
-    background-size: 67px 90px;
-    svg{
-      bottom: 20px;
-      left: 13px;
-      width: 41px;
-      height: 47px;
-    }
-    .icon-close-dims{left: 21px;}
-  }
 }

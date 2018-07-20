@@ -26,7 +26,6 @@
 @import "modules/column";
 @import "modules/list-item";
 @import "modules/quote";
-@import "modules/take-home";
 @import "modules/related-articles";
 @import "modules/pull";
 
@@ -35,14 +34,9 @@
 @import "templates/guide";
 @import "templates/list";
 @import "templates/reveal";
-@import "templates/timeline";
-@import "templates/video";
 
 // Pages
 @import "pages/home";
 @import "pages/404";
 @import "pages/long-forms";
 @import "pages/articles-index";
-
-// Animation
-@import "animation";
