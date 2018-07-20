@@ -7,17 +7,16 @@
   // -------------------
 	.hero{
     background-size: auto 482px;
-    padding-top: 482px;
-	  margin-bottom: 60px;
+    // padding-top: 482px;
 
     @include mq($from: medium) {
-      background-size: cover;
+      background-size: 100%;
       min-height: auto;
       padding-top: 0;
     }
 
   	@include mq($from: large){
-			margin-bottom: -40px;
+
 		}
 
     img{
@@ -62,14 +61,101 @@
 
 			@include mq($from: large){
 				width: 80%;
-				top: 60%;
+				top: 47%;
 			}
 
 			@include mq($from: large-mid){
         p{width: 100%;}
 			}
-		}
-	}
+    }
+    .contact-semi{
+      position: absolute;
+      right: 0;
+      transform: translate3d(220px,0,0) ;
+      top: 35%;
+      border-radius: 50%;
+      padding: 30px 65px;
+      background: rgba(47, 114, 189, 0.9);
+      width: 220px;
+      height: 220px;
+      color: #ffffff !important;
+      display: flex;
+      cursor: pointer;
+      z-index: 10;
+      transition: $slow $base-timing;
+      opacity: 0;
+      animation: slide .8s ease-in forwards;
+      &:hover{
+        transform: scale(1.1);
+        filter: brightness(1.1);
+        img{
+          transform: translate3d(-10px,0,0) rotate(180deg);
+        }
+      }
+      p{
+        writing-mode: tb-rl;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 7px;
+      }
+      img{
+        transform: rotate(180deg);
+        position: absolute;
+        left: 0;
+        width: 15px;
+        left: 37px;
+        top: 100px;
+        transition: $slow $base-timing;
+      }
+     &.open{
+        width: 540px;
+        height: 540px;
+        right: -220px;
+        top: 15%;
+        transform: scale(1) !important;
+        img{top: 255px; transform: rotate(0deg);}
+      }
+    }
+  }
+
+  @keyframes slide{ 100%{transform: translate3d(110px,0,0); opacity: 1 ;} }
+  
+  .circles{
+    position: relative;
+    margin-top: -250px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    .circle{
+      display: inline-block;
+      border-radius: 50%;
+      padding: 50px;
+      background: $midblue;
+      width: 200px;
+      height: 200px;
+      color: #ffffff !important;
+      @include font-size(22px);
+      transition: transform $base-duration $base-timing, filter $base-duration $base-timing;
+      p{margin-top: 20px; text-align: center;}
+      &:hover{
+        transform: scale(1.1);
+        filter: brightness(1.1);
+        img{
+          // transform: translate3d(10px,0,0);
+          transform: rotate(-90deg);
+        }
+      }
+      img{
+        width: 20px;
+        display: block;
+        margin: 0 auto;
+        transition: $base-duration $base-timing;
+      }
+      &:nth-of-type(2){
+        background: $lightblue;
+      }
+    }
+  }
 
 
   // Random Home Stuff

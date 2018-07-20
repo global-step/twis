@@ -44,6 +44,9 @@
     p{
       margin: 0;
       padding: 48px 20px 48px;
+      &:hover{
+        color: $lightblue !important;  
+      }
     }
     // direction aware hover
     p:before {
@@ -64,10 +67,6 @@
       transition-delay: 0.1s;
       left: 0;
     }
-    // p:hover ~ p:before {
-    //   left: 0;
-    // }
-    // direction aware hover end
 
     .sub{
       pointer-events: none;
@@ -99,19 +98,6 @@
       }
     }
   }
-  
-  // a{
-  //   // color: $light;
-  //   display: block;
-  //   width: 100%;
-  //   @include font-size(14px);
-  //   @include font-medium();
-  //   &:hover{
-  //     color: $lightblue !important;
-    
-  //   }
-  //   margin-bottom: 20px;
-  // }
   .menu-toggle {
     position: absolute;
     top: 0px;
@@ -138,6 +124,10 @@
     @include font-bold();
     background: $blue;
     color: #ffffff;
+    transition: background-color $base-duration $base-timing;
+    &:hover{
+      background: $lightblue;
+    }
   }
 
   @include mq($from: medium) {

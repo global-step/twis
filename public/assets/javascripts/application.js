@@ -42,8 +42,12 @@ var $body = $("body"),
     distanceRounded,
     distanceDivided;
 
+
 // Document Ready
 $( document ).ready(function() {
+
+  // add transitions back in...
+  $("body").removeClass("preload");
 
   // Menu Toggle
   $menuToggle.click(function(e){
@@ -51,6 +55,12 @@ $( document ).ready(function() {
     $mainNav.fadeToggle("300");
     $body.toggleClass("open");
   });
+
+  $('.contact-semi').click(function(){
+    $(this).toggleClass('open');
+  })
+
+
 
   // Reveal
   $(panels).click(function(){
@@ -69,172 +79,6 @@ $( document ).ready(function() {
     }
   });
 
-  // Bodymovin
-  bodymovin.searchAnimations();
-
-  // Longform intro auto reveal
-  if ($body.hasClass("long-form") || $body.hasClass("timeline")){
-    setTimeout(function(){ 
-      $intro.addClass("show");
-      $twenties.addClass("show");
-    }, 2000);
-  }
-
-  // Hero Counts
-  if($heroCounts.length){
-    setTimeout(function(){ 
-      count($heroCounts)
-    }, 2300);
-  }
-
 
 }); //eo:doc ready
  
-// ------------------------------------------------------------
-// Waypoints
-// ------------------------------------------------------------
-
-// Only call waypoints after hero has loaded
-
-setTimeout(function(){ 
-  waypointsWrapper() ;
-}, 2000);
-
-
-function waypointsWrapper() {
-
-  var $footer = $(".site-footer, .related-articles"),
-      $time = $(".time, .timeline .quote"),
-      $elementsShow = $('.row'),
-      $longFormsEls = $('.long-form .column, .long-form .feature, .long-form .feature-row, .long-form .text.stat, .long-form .pull, .long-form .feature-solid'),
-      $countFiggure = $('.count-figure'),
-      $counter;
-
-  // Elements
-  if($elementsShow.length) {
-    var elementsWaypoint = $elementsShow.waypoint(function() {
-      $(this.element).addClass("show");
-      $counter = $(this.element).find("[data-figure]");
-      setTimeout(function(){ count($counter); }, 900);
-    }, {
-      offset: '75%'
-    });
-  }
-
-  // Long Forms
-  if ($longFormsEls.length) {
-    var longFormsElsWaypoint = $longFormsEls.waypoint(function() {
-      $(this.element).addClass("show");
-      }, {
-        offset: '90%'
-    });
-  }
-
-  // Count Figure
-  if ($countFiggure.length) {
-    var countFiggureWaypoint = $countFiggure.waypoint(function() {
-      count($(this.element))
-      }, {
-        offset: '90%'
-    });
-  }
-
-  // Footer
-  if ($footer.length) {
-    var footerWaypoint = $footer.waypoint(function() {
-      $(this.element).addClass("show");
-     }, {
-        offset: '90%'
-    });
-  }
-
-  // Time
-  if ($time.length) {
-    var timeWaypoint = $time.waypoint(function() {
-      $(this.element).addClass("show");
-     }, {
-        offset: '75%'
-    });
-  }
-
-
-}
-
-// ------------------------------------------------------------
-// Paralax
-// ------------------------------------------------------------
-scrollFunWindow($heroMagTitle, 3)
-scrollFunWindow($heroPageTitle, 6)
-scrollFunWindow($heroDesc, 9)
-
-scrollFunElement($iconsToMove, 5)
-scrollFunNumber($numbersToMove, 5)
-scrollFunElement($animationsToMove, 15)
-
-
-
-
-function scrollFunElement($element, division){
-  $(window).scroll(function () { 
-    $element.each(function(index) {
-      scrollTop     = $(window).scrollTop();
-      elementOffset = $(this).offset().top;
-      distance      = (elementOffset - scrollTop);
-      distanceRounded = Math.floor(distance);
-      distanceDivided = distanceRounded/division;
-      $(this).find("svg").css({transform: 'translateY(' + distanceDivided + 'px)'});
-    });
-  });
-}
-
-function scrollFunNumber($element, division){
-  $(window).scroll(function () { 
-    $element.each(function(index) {
-      scrollTop     = $(window).scrollTop();
-      elementOffset = $(this).offset().top;
-      distance      = (elementOffset - scrollTop);
-      distanceRounded = Math.floor(distance);
-      distanceDivided = distanceRounded/division;
-      $(this).find("svg[class*='icon-num-']").css({transform: 'translateY(' + distanceDivided + 'px)'});
-    });
-  });
-}
-
-function scrollFunWindow($element, division){
-  $(window).scroll(function () { 
-    $element.each(function(index) {
-      scrollTop     = $(window).scrollTop();
-      distanceDivided = scrollTop/division;
-      $(this).css({transform: 'translateY(-' + distanceDivided + 'px)'});
-    });
-  });
-}
-
-// ------------------------------------------------------------
-// Count Function
-// ------------------------------------------------------------
-function count($number) {
-  var countTo = $number.attr('data-figure'),
-      speed  = 0,
-      currentCount = 0,
-      $numberText = $number.text();
-    if(countTo < 10) {
-      speed = 250;
-    } else {
-      speed = 50;
-    }
-  
-  if($numberText == 0)  {
-    var countInterval = setInterval(counterUp, speed);
-  }
-
-
-  function counterUp() {
-    currentCount++;
-    if (currentCount <= countTo) {
-      $number.text(currentCount)
-    } else {
-      clearInterval(countInterval);
-    }
-  }
-}; 

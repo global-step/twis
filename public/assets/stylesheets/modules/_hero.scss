@@ -76,7 +76,7 @@
   }
 
   @include mq($from: large) {
-    @include aspect-ratio(4, 2.5);
+    @include aspect-ratio(16,9);
   }
   @include mq($from: extra-large) {
      @include aspect-ratio(16, 9);
