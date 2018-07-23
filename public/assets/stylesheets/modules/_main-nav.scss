@@ -123,6 +123,7 @@
     padding: 48px 30px;
     @include font-bold();
     background: $blue;
+    width: 120px;
     color: #ffffff;
     transition: background-color $base-duration $base-timing;
     &:hover{

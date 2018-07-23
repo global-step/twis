@@ -8,7 +8,6 @@
 	.hero{
     background-size: auto 482px;
     // padding-top: 482px;
-
     @include mq($from: medium) {
       background-size: 100%;
       min-height: auto;
@@ -86,10 +85,10 @@
       opacity: 0;
       animation: slide .8s ease-in forwards;
       &:hover{
-        transform: scale(1.1);
+        // transform: scale(1.1);
         filter: brightness(1.1);
         img{
-          transform: translate3d(-10px,0,0) rotate(180deg);
+          transform: translate3d(-10px,65px,0) rotate(180deg);
         }
       }
       p{
@@ -99,21 +98,41 @@
         letter-spacing: 7px;
       }
       img{
-        transform: rotate(180deg);
+        transform: translate3d(0,65px,0) rotate(180deg);
         position: absolute;
         left: 0;
         width: 15px;
         left: 37px;
-        top: 100px;
+        // top: 100px;
         transition: $slow $base-timing;
       }
+      .contact{
+        font-size: 0; 
+        img{width: 0; opacity: 0;position: relative; transform: none; top: initial; left: initial; transition: opacity $slow $base-timing;}}
      &.open{
-        width: 540px;
-        height: 540px;
-        right: -220px;
-        top: 15%;
+        max-width: 600px;
+        height: 30vw;
+        width: 40vw;
+        right: -12%;
+        top: 21%;
+        padding: 9% 65px;
         transform: scale(1) !important;
-        img{top: 255px; transform: rotate(0deg) translate3d(-10px,0,0);}
+        img{transform: rotate(0deg) translate3d(-10px,188px,0);}
+        > p{display: none;}
+        .contact{
+          display: block;
+          img{width: 15px; margin-right: 10px; margin-bottom: -3px; opacity: 0.5; position: relative; transform: none; top: initial;}
+          p{
+            margin-bottom: 50px;
+            writing-mode: initial;
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: 1px;
+            filter: brightness(0.9);
+            transition: $slow $base-timing;
+            &:hover{filter: brightness(1.2); img{opacity: 1;}}
+          }
+        }
       }
     }
   }
@@ -153,6 +172,89 @@
       }
       &:nth-of-type(2){
         background: $lightblue;
+      }
+    }
+  }
+
+  .news{
+    font-size: 12px;
+    width: 100%;
+    .news-item{
+      display: inline-block;
+      vertical-align: top;
+      background: #fcfcfc;
+      margin: 0 25px 30px 0;
+      box-shadow: 3px 3px 12px 2px #b5b4b43b;
+      width: calc(100% / 3 - 20px);
+      padding: 25px;
+      min-height: 225px;
+      transition: $base-duration $base-timing;
+      &:last-of-type{margin-right: 0;}
+      .date{
+        color: $light-grey;
+        font-size: 14px;
+      }
+      .content{
+        min-height: 90px;
+      }
+      a{
+        color: $lightblue;
+        img{
+          width: 15px;
+        }
+      }
+      span{
+        padding: 5px 10px;
+        margin-left: 10px;
+        background: $lightblue;
+        color: $light;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .programs{
+    width: 100%;
+    font-size: 0;
+    background: $midblue;
+    .block{overflow: visible;}
+    .program-item{
+      width: 25%;
+      padding: 30px;
+      display: inline-block;
+      margin-right: -1px;
+      position: relative;
+      overflow: hidden;
+      color: $light;
+      background: $midblue;
+      transition: $base-duration $base-timing;
+      &:before{
+        content: '';
+        background: $lightblue;
+        opacity: 0.85;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+      &:nth-of-type(even):before{ background: $midblue}
+      p{
+        font-size: 12px;
+        opacity: 0;
+        min-height: 300px;
+        transition: $base-duration $base-timing;
+      }
+      a{font-size: 12px;}
+      a,p,h3{position: relative; z-index: 2;}
+      h3{
+        text-align: center;
+        @include font-size(32px);
+      }
+      &:hover{
+        transform: scale3d(1.1, 1.1, 1.1);
+        z-index: 1;
+        p{opacity: 1;}
       }
     }
   }
@@ -253,10 +355,6 @@
       background-position: center;
       background-size: 100%;
       @include bottom-spacing();
-
-      &.top-push a{
-        padding-top: 120px;
-      }
 
       &:hover{
         background-size: 105%;

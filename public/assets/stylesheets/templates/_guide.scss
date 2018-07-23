@@ -81,7 +81,6 @@
   h2{
     i{font-style: normal;}
     @include font-size(36px);
-    text-transform: none;
     @include mq($from: extra-large){
       width: 70%;
     }

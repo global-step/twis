@@ -79,6 +79,29 @@ $( document ).ready(function() {
     }
   });
 
+  fetch('https://www.gsacademy.com/api/v1/news/headlines.json?brand_id=2', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    news = JSON.parse(data)
+    for(var i = 0; i < 3; i++){
+      $('.news').append( 
+        '<div class="news-item">' +
+          '<p class="date">'+news[i].date+'<span>News</span></p>'+
+          '<p class="content">'+news[i].content+'</p>'+
+          '<a>Read More <img src="/assets/images/arrow-blue.svg"/></a>'+
+        '</div>'
+      )
+    }
+    console.log(news)
+  })
 
 }); //eo:doc ready
  
