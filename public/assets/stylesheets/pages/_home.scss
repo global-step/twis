@@ -176,7 +176,10 @@
     }
   }
 
-  .row{margin: 50px auto;}
+  .row{
+    margin: 50px auto;
+    padding: 0 90px;
+  }
 
   .news{
     font-size: 12px;
@@ -218,6 +221,7 @@
   .programs{
     width: 100%;
     font-size: 0;
+    padding: 0;
     background: $midblue;
     .block{overflow: visible;}
     .program-item{
@@ -348,8 +352,9 @@
   }
 
   .social{
-    height: 340px;
+    padding: 0;
     position: relative;
+    .block{height: 340px;}
     .fb-page{
       margin: 0 50px;
       position: absolute;
@@ -378,6 +383,30 @@
         &:hover img{
           filter: brightness(1.3);
         }
+      }
+    }
+  }
+  .see-more{
+    text-align: center;
+    .more-item{
+      display: inline-block;
+      vertical-align: top;
+      margin: 30px;
+      width: 340px;
+      height: 180px;
+      padding: 75px 20px;
+    }
+  }
+
+  .partners{
+    .partner-item{
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% / 2 - 3px);
+      img{
+        width: auto;
+        margin-bottom: 50px;
+        display: block;
       }
     }
   }
