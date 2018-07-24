@@ -38,4 +38,17 @@ img {
 
 a img{outline: 0;}
 
+.more{
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: none !important;
+  &.blue{color: $lightblue}
+  &.white{color: $light}
+  img{
+    display: inline-block !important;
+    width: 15px !important;
+    margin: 0 10px !important;
+  } 
+}
+
 .arrow{width: 15px;}

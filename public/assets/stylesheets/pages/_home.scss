@@ -138,7 +138,7 @@
   }
 
   @keyframes slide{ 100%{transform: translate3d(110px,0,0); opacity: 1 ;} }
-  
+
   .circles{
     position: relative;
     margin-top: -250px;
@@ -175,6 +175,8 @@
       }
     }
   }
+
+  .row{margin: 50px auto;}
 
   .news{
     font-size: 12px;
@@ -290,7 +292,7 @@
         margin: 50px auto;
       }
       p{
-        margin: 100px auto;
+        margin: 100px auto 0; 
       }
     }
   }
@@ -309,14 +311,74 @@
       font-size: 33px;
       letter-spacing: 22px;
     }
-    a{
-      text-transform: uppercase;
-      font-size: 12px;
+    
+  }
+
+  .testimonials{
+    .testimonial-item{
+      display: inline-block;
+      vertical-align: top;
+      padding: 35px;
+      transition: $base-duration $base-timing;
+      text-align: center;
+      margin-right: 10px;
+      width: calc(100% / 3 - 20px);
+      &:last-of-type{margin-right: 0;}
+      h4{
+        margin: 20px auto 10px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        @include font-size(26px);
+        font-weight: 700;
+      }
+      p:first-of-type{color: $light-grey; @include font-size(12px)}
+      p{
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
       img{
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+      a{
+        margin: 30px 0;
+      }
+    }
+  }
+
+  .social{
+    height: 340px;
+    position: relative;
+    .fb-page{
+      margin: 0 50px;
+      position: absolute;
+      left: 10%;
+      top: -30px;
+    }
+    .follow{
+      float: right;
+      padding: 80px;
+      text-align: center;
+      width: 50%;
+      h4{
+        @include font-size(26px);
+        letter-spacing: 7px;
+        margin: 20px auto;
+      }
+      a{
+        width: 40px;
+        height: 40px;
+        margin: 10px;
         display: inline-block;
-        width: 15px;
-        margin: 0 10px;
-      } 
+        vertical-align: top;
+        img{
+          transition: $base-duration $base-timing;
+        }
+        &:hover img{
+          filter: brightness(1.3);
+        }
+      }
     }
   }
 
