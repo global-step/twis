@@ -18,9 +18,9 @@
 
 @mixin content-wrapper{
   @include mq($from: medium) {
-    width: span(14);
-    margin-left: auto;
-    margin-right: auto;
+    // width: span(14);
+    // margin-left: auto;
+    // margin-right: auto;
   }
 }
 

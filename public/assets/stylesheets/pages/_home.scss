@@ -227,6 +227,7 @@
       overflow: hidden;
       color: $light;
       background: $midblue;
+      min-height: 450px;
       transition: $base-duration $base-timing;
       &:before{
         content: '';
@@ -239,29 +240,85 @@
         top: 0;
       }
       &:nth-of-type(even):before{ background: $midblue}
+      a,p,h3{position: relative; z-index: 2; text-align: center; display: block;}
       p{
         font-size: 12px;
         opacity: 0;
-        min-height: 300px;
+        max-height: 0;
         transition: $base-duration $base-timing;
       }
-      a{font-size: 12px;}
-      a,p,h3{position: relative; z-index: 2;}
+      a{
+        font-size: 12px; text-transform: uppercase;
+        position: absolute;
+        color: $light;
+        bottom: 30px;
+        right: 0;
+        left: 0;
+      }
       h3{
-        text-align: center;
         @include font-size(32px);
+        padding-top: 170px; 
+        transition: $base-duration $base-timing;
       }
       &:hover{
         transform: scale3d(1.1, 1.1, 1.1);
         z-index: 1;
-        p{opacity: 1;}
+        box-shadow: 2px 2px 13px 1px rgba(37,37,37,0.23);
+        p{opacity: 1; max-height: 300px;}
+        h3{padding: 0;}
       }
     }
   }
 
+  .location{
+    text-align: center;
+    .location-item{
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      // height: 200px;
+      padding: 35px;
+      transition: $base-duration $base-timing;
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-align: center;
+      margin: 30px 5%;
+      img{
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 50px auto;
+      }
+      p{
+        margin: 100px auto;
+      }
+    }
+  }
 
-  // Random Home Stuff
-  // -------------------
+  .login{
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+    img{
+      width: 50px;
+      display: block;
+      margin: 40px auto;
+    }
+    p{
+      font-size: 33px;
+      letter-spacing: 22px;
+    }
+    a{
+      text-transform: uppercase;
+      font-size: 12px;
+      img{
+        display: inline-block;
+        width: 15px;
+        margin: 0 10px;
+      } 
+    }
+  }
 
 	.mobile-only{
 		display: block;
@@ -284,30 +341,9 @@
 		}
 	}
 
-
   .text{
     @include homeRightPadding();
   }
-
-  // Feature
-  // -------------------
-	 .feature{
-    position: relative;
-    clear: both;
-    @include clearfix();
-    display: block;
-    .text{position: relative;}
-    a.text:hover{color: $light !important;}
-    img, video{width: 100%;}
-    h2{text-transform: none;@include font-light();}
-    @include mq($from: large-mid){
-      width: span(12 of 14); 
-      margin-left: auto !important;
-      margin-right: auto !important;
-      h2{@include font-size(48px);}
-    }
-
-	}
 
   // Pull (Full Width)
   // -------------------
@@ -315,178 +351,14 @@
 		position: relative;
     @include bottom-spacing();
     display: block;
-		
-    .read-time{
-      top: 40px;
-      right: 40px;
-    }
 
     h2 strong{display: block;}
-
-		.bodymovin{
-      bottom: -10px;
-      width: 330px;
-		}
 
 		.inner{
 		  @include blockPadding();
 			display: inline-block; 
 			width: 100%; 
 		}
-
-
-	}
-
-  // Offset Blocks
-  // -------------------
-	.offset-blocks{
-		font-size: 0;
-		text-align: center;
-    @include clearfix();
-
-		.block{
-			text-align: left;
-			display: inline-block;
-			vertical-align: top;
-			width: 100%;
-      padding-bottom: 100%;
-      position: relative;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      @include bottom-spacing();
-
-      &:hover{
-        background-size: 105%;
-        a, a:hover{color: $light;}
-        .big-five svg{
-          filter: blur(5px);
-        }
-      }
-
-      &:last-of-type{margin-bottom: 0;}
-
-      p{font-size: 16px;}
-
-			a{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        @include blockPadding();
-        @include homeRightPadding();
-      }
-			
-      h2{position: relative; z-index: 1; width: auto; }
-
-
-		}
-
-    @include mq($from: large){
-      margin-bottom: 120px;
-			.block{
-				width: span(50%);
-				padding-bottom: 50%;
-        float: left;
-				&:last-of-type{margin-top: 120px;}
-			}
-		}
-
-    // List Offset Block
-		&.list{
-			width: 100%; 
-			clear: both;
-			.block:last-of-type{
-				margin-top: 0;
-				width: 100%;
-				@include mq($from: large){
-					float: right;
-					width: 50%;
-					margin-bottom: 100px;
-          padding-bottom: 50%;
-				}
-			}
-		}
-
-		.list-item{
-			text-align: left;
-			@include mq($from: large){
-				margin-bottom: 0;
-			}
-			img, video{
-				width: 100%;
-				@include mq($from: large){
-					width: 50%;
-				}
-			}
-			.text{
-				width: 100%;
-				float: none;
-				font-size: 16px;
-				margin: -1px auto;
-        a{display: block;}
-				@include mq($from: large){
-					width: span(10.6 of 14);
-					opacity: 0.9;
-					z-index: 10;
-					position: absolute;
-					left: 0; right: 0;
-					top: 3em;
-				}
-				@include mq($from: large-mid){
-					width: span(8.6 of 14)
-				}
-			}
-			@include mq($from: large){
-				&:nth-of-type(even){
-					img, video{
-						float: right; 
-					}
-				}
-			}
-			h2{
-				font-size: 24px;
-				@include mq($from: medium){
-					font-size: 36px;
-					padding-right: 30px;
-				}
-				@include mq($from: large-mid){
-					font-size: 48px;
-				}
-			}
-		}
-
-	}
-
-
-  // Feature Solid
-  // -------------------
-	.feature-solid{
-		@include bottom-spacing();
-		width: 100%;
-    @include clearfix();
-    img, video{
-      display: block;
-      width: 100%;
-    }
-
-    @include mq($from: large){
-      img, video{
-        float: right;
-        width: span(8 of 14);
-      }
-      a{
-        width: span(6 of 14);
-        float: left;
-        clear: none;
-      }
-      h2 strong{display: block;}
-
-    }
 
 
 	}
