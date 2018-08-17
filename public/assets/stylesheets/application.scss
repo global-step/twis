@@ -17,25 +17,14 @@
 @import "modules/main-nav";
 @import "modules/footer";
 @import "modules/layout";
-@import "modules/read-time";
-@import "modules/read-more";
-
 @import "modules/hero";
-@import "modules/intro";
-@import "modules/feature";
-@import "modules/column";
-@import "modules/list-item";
-@import "modules/quote";
-@import "modules/related-articles";
-@import "modules/pull";
-
-// Templates
-@import "templates/long-forms";
-@import "templates/list";
-@import "templates/reveal";
 
 // Pages
 @import "pages/home";
+@import "pages/about";
+@import "pages/educational-policy";
+@import "pages/special-offers";
+@import "pages/gsa-group";
+@import "pages/daily-schedule";
+@import "pages/yearly-schedule";
 @import "pages/404";
-@import "pages/long-forms";
-@import "pages/articles-index";

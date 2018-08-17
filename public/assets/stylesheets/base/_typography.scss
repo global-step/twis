@@ -47,16 +47,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-  @include font-size(55px);
-}
-h2{
   @include font-size(44px);
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 10px;
   line-height: 1.8;
+  font-weight: 400;
 }
-h3{@include font-size(21px);text-transform: uppercase;}
+h2{
+  @include font-size(34px);
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 10px;
+  line-height: 1.8;
+  @media(max-width: 992px){
+    @include font-size(42px);
+  }
+}
+h3{@include font-size(21px);text-transform: uppercase; font-weight: 700;}
 h4{@include font-size(18px);text-transform: uppercase;}
 h5{@include font-size(18px);text-transform: uppercase;}
 h6{@include font-size(18px);text-transform: uppercase;}

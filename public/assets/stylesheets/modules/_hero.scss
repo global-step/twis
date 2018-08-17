@@ -9,40 +9,8 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: auto 395px;
-  padding-top: 425px;
-
-  &:before{
-    content: "";
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: $light;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.6s ease-in;
-    z-index: 20;
-  }
-
-  .read-time{
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translate3D(-50%, 0, 0);
-    z-index: 10;
-  }
-
-  .mag-title{
-    @include caps();
-    @include font-size(16px);
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translate3D(-50%, 0, 0);
-  }
+  // background-size: auto 395px;
+  // padding-top: 425px;
 
   .hero__content{
     text-align: center;
@@ -53,13 +21,31 @@
     margin: 0 auto;
     h1 {@include font-size(36px);}
     p{@include font-size(14px);}
+
+    &.offset{
+      position: absolute;
+      bottom: -40px;
+      left: 40px;
+      top: initial;
+      width: auto;
+      padding: 20px 40px;
+      background: #2fa4bd;
+      transform: none;
+      h1{
+        padding: 0;
+        line-height: 1;
+        margin-bottom: 0;
+        letter-spacing: 25px;
+        margin-right: -25px;
+      }
+    }
   }
 
   @include mq($from: medium) {
     background-size: cover;
     min-height: auto;
     padding-top: 0;
-    @include aspect-ratio(3,4);
+    // @include aspect-ratio(3,4);
     .hero__content{
       width: 54%;
       top: 50%;
@@ -68,21 +54,19 @@
       transform: translate3D(-50%, -50%, 0);
       display: block;
       padding: 0;
-      .mag-title{position: static;transform: translate3D(0, 0, 0);margin-bottom: 25px; top: 280px;}
-      h1 {@include font-size(36px);margin-bottom: 20px;line-height: 1.3em;}
+      h1 {@include font-size(44px);margin-bottom: 20px;line-height: 1.8; padding: 0 40px;}
     }
 
     
   }
 
   @include mq($from: large) {
-    @include aspect-ratio(16,9);
+    // @include aspect-ratio(16,9);
   }
   @include mq($from: extra-large) {
-     @include aspect-ratio(16, 9);
+    //  @include aspect-ratio(16, 9);
      .hero__content{
-        h1 {@include font-size(63px);}
-        p{@include font-size(16px);}
+        // p{@include font-size(16px);}
      }
   }
 }
@@ -108,3 +92,95 @@
     }
   }
 }
+
+.hero{
+  background-size: cover;
+  min-height: 800px;
+  @media(max-width: 1100px){
+    min-height: 800px;
+  }
+  .hero__content{
+    width: 100%;
+    top: 215px;
+    position: absolute;
+    max-width: 1200px;
+
+    @include mq($from: medium){
+        top: 60%;
+    }
+
+    @include mq($from: large){
+        width: 70%;
+        top: 60%;
+    }
+
+    @include mq($from: large-mid){
+        p{width: 100%;}
+    }
+  }
+  .contact-semi{
+    position: absolute;
+    right: 0;
+    transform: translate3d(220px,0,0) ;
+    top: 35%;
+    border-radius: 50%;
+    padding: 30px 65px;
+    background: rgba(47, 114, 189, 0.9);
+    width: 220px;
+    height: 220px;
+    color: #ffffff !important;
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+    transition: $slow $base-timing;
+    opacity: 0;
+    animation: slide .8s ease-in forwards;
+    &:hover{
+      filter: brightness(1.1);
+    }
+    p{
+      writing-mode: tb-rl;
+      margin: 0;
+      text-align: center;
+      letter-spacing: 7px;
+    }
+    img{
+      transform: translate3d(0,65px,0) rotate(180deg);
+      transform-origin: left;
+      position: absolute;
+      left: 0;
+      width: 15px;
+      left: 37px;
+      transition: $slow $base-timing;
+    }
+    .contact{
+      font-size: 0; 
+      margin: auto 0;
+      img{width: 0; opacity: 0;position: relative; transform: none; top: initial; left: initial; transition: opacity $slow $base-timing;}
+    }
+    &.open{
+        height: 600px;
+        width: 770px;
+        right: -390px;
+        top: 20%;
+        img{transform: rotate(0deg) translate3d(-10px,240px,0); }
+        > p{display: none;}
+      .contact{
+        img{width: 15px; margin-right: 10px; margin-bottom: -3px; opacity: 0.5; position: relative; transform: none; top: initial;}
+        p{
+          margin-bottom: 50px;
+          writing-mode: initial;
+          text-align: left;
+          font-size: 12px;
+          letter-spacing: 1px;
+          filter: brightness(0.9);
+          transition: $slow $base-timing;
+          &:hover{filter: brightness(1.2); img{opacity: 1; }}
+        }
+      }
+    }
+    @media(max-width: 1100px){display: none;}
+  }
+}
+
+@keyframes slide{ 100%{transform: translate3d(110px,0,0); opacity: 1 ;} }

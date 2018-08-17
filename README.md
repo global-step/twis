@@ -89,7 +89,8 @@ We're using a gulp task to generate a sprite of all the icons in the `public/ass
 The html file generated to view all assets, and retreive the `<use>` tag for each at `/public/assets/images/symbol/sprite.symbol.html`.
 
 ### Content 
-For the ease of copy edits and changes, all copy for articles is stored in the `/public/articles/_data.json` file. For whatever reason, any key used in this file must first live in `/harp.json` as well, hence its long list of empty vars.
+For the ease of copy edits and changes, all copy for articles is stored in the `/public/articles/_data.json` file. 
+For whatever reason, any key used in this file must first live in `/harp.json` as well, hence its long list of empty vars.
 
 To display the content, us EJS template tags, e.g `<%- heroTitle %>`. The `-` is important as it renders HTML correctly.
 

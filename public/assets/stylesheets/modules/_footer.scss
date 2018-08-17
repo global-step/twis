@@ -5,14 +5,187 @@
 footer.site-footer{
   color: $dark;
   background-color: $lighter-grey;
-  padding: 60px span(1 of 16);
+  // padding: 60px span(1 of 16);
+  padding: 0;
   position: relative;
   overflow: hidden;
+  .logo{
+    display: block;
+    margin: 50px auto 70px;
+    text-align: center;
+    img{width: 111px;}
+  }
+  .row{
+    padding: 0px 5% 0px 10%;
+    margin: 50px auto 90px;
+  }
   p{z-index: 10;position: relative;}
 
   a{
     color: $dark;
     &:hover{color: $blue;}
+  }
+
+  .col-lg-2{
+    min-height: 215px; margin-bottom: 40px;
+    &:nth-of-type(7){clear: both;}
+    &:nth-of-type(n+7){min-height: 0; margin-bottom: 0;}
+    @media(max-width: 1200px){
+      &:nth-of-type(n+5){min-height: 0; margin-bottom: 0;}
+    }
+    @media(max-width: 991px){
+      min-height: 0; margin-bottom: 0;
+    }
+  }
+
+  .list-group{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    
+    li{
+      margin-bottom: 7px;
+      // line-height: 1;
+      font-size: 12px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      list-style: none;
+      padding: 0.625rem 0px 0px;
+
+      a{
+        color: rgb(34, 34, 34);
+        padding-bottom: 2px;
+        text-decoration: none;
+        transition: all 0.25s ease-in 0s;
+        font-size: 11px;
+        text-transform: none;
+        font-weight: 300;
+        font-style: normal;
+        padding-bottom: 2px;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    h5{
+      text-transform: uppercase;
+      // min-height: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      color: black;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 991px){
+    margin-top: 30px;
+    .row{padding: 0 20px;}
+    > .row > div .wrapper{
+      max-height: 80px;
+      overflow: hidden;
+      padding: 27px 0px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: .3s ease-in-out;
+      .list-group{
+        padding-left: 0;
+        li{line-height: 2;}
+        li:first-of-type{
+          margin-top: 20px;
+        }
+        li:last-of-type{
+          margin-bottom: 0;
+        }
+        a{
+          font-size: 18px;
+          text-indent: 20px;
+          &.link-title{text-indent: 0;}
+        }
+      }
+      h5, h5 a{
+        font-size: 22px;
+        margin-top: -25px;
+        margin-bottom: 20px;
+      }
+      &:after, &:before{
+        content: '';
+        position: absolute;
+        right: 5px;
+        background: #dcdcdc;
+        width: 16px;
+        height: 2px;
+        transition: .3s ease-in-out;
+        transform-origin: bottom;
+        transform: rotate(38deg);
+        font-size: 30px;
+        font-family: -webkit-pictograph;
+        top: 38px;
+        pointer-events: none;
+      }
+      &:after{
+        transform: rotate(-38deg);
+        right: 16px;
+      }
+      &.open{
+        max-height: 600px;
+        &:before{
+          transform:rotate(-38deg) translate3d(1px,2px,0);
+        }
+        &:after{
+          transform: rotate(38deg) translate3d(1px,1px,0);
+        }
+      }
+    }
+    > .row > div:last-of-type .wrapper{
+      border-bottom: 0;
+      margin-bottom: 20px;
+    }
+    > .row > div:nth-of-type(1n+10) .wrapper{
+        max-height: 80px !important;
+        &:after{
+          display: none;
+        }
+    }
+  }
+
+  .end{
+    background: rgb(0, 51, 102);
+    padding: 40px 5% 30px 10%;
+    text-align: center;
+    margin-bottom: 0;
+
+    a{
+      color: rgb(255, 255, 255);
+      word-break: break-all;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 11px;
+      &:hover{color: rgb(255, 255, 255) !important;}
+    }
+    .col-12:first-of-type{text-align: left;}
+    img{
+      width: 15px;
+      margin-right: 10px;
+      margin-bottom: 2px;
+      opacity: 0.5;
+      position: relative;
+      -webkit-transform: none;
+      transform: none;
+      top: initial;
+    }
+    @media (max-width: 1200px){
+      padding: 40px;
+      .col-12:first-of-type{text-align: left;}
+      .col-12{display: block; margin: 50px auto; text-align: left;}
+      a{
+        font-size: 14px;
+        opacity: 0.6;
+      }
+    }
   }
 
 }

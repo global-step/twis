@@ -1,7 +1,26 @@
 {
-  "index": {
-    "bodyclass": "home",
-    "heroTitle": "What's Next?",
-    "heroDesc": "The magazine that looks to the future"
+  "about": {
+    "bodyclass": "about",
+    "template": "default"
+  },
+  "educational-policy": {
+    "bodyclass": "educational-policy",
+    "template": "default"
+  },
+  "special-offers": {
+    "bodyclass": "special-offers",
+    "template": "default"
+  },
+  "yearly-schedule": {
+    "bodyclass": "yearly-schedule",
+    "template": "default"
+  },
+  "daily-schedule": {
+    "bodyclass": "daily-schedule",
+    "template": "default"
+  },
+  "gsa-group": {
+    "bodyclass": "gsa-group",
+    "template": "default"
   }
 }
