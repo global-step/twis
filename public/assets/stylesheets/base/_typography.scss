@@ -93,4 +93,7 @@ blockquote{
   }
 }
 
-  strong{@include font-medium();}
+strong{@include font-medium();}
+
+.center{text-align: center}
+.grey{color: #a19f9f;}

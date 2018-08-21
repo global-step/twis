@@ -19,8 +19,24 @@
     "bodyclass": "daily-schedule",
     "template": "default"
   },
+  "classes": {
+    "bodyclass": "classes",
+    "template": "default"
+  },
+  "club": {
+    "bodyclass": "club",
+    "template": "default"
+  },
+  "curriculum": {
+    "bodyclass": "curriculum",
+    "template": "default"
+  },
   "gsa-group": {
     "bodyclass": "gsa-group",
+    "template": "default"
+  },
+  "contact": {
+    "bodyclass": "contact",
     "template": "default"
   }
 }

@@ -58,6 +58,12 @@
             transition: $base-duration $base-timing; 
         }
         p{font-size: 18px; transition: margin $base-duration $base-timing; }
+        a{
+            &:hover img{animation: slide .5s cubic-bezier(0.39, 0.58, 0.57, 1) infinite alternate;}
+            img{
+                margin-left: 10px;
+            }
+        } 
         .reveal{
             max-height: 0; 
             transition: $base-duration $base-timing; 
@@ -98,6 +104,9 @@
         &:before{
             background: $lightblue;
         }
+    }
+    @keyframes slide{
+        100%{transform: translate3d(10px,0,0)}
     }
     .mobile-reveal{
         display: none;

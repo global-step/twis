@@ -28,7 +28,9 @@ $( document ).ready(function() {
   })
 
   $('.scrollDown').click(function(){
-    $("html, body").animate({ scrollTop: 820 }, "slow");
+    var heroHeight = $('.hero').css('height')
+    var heroHeight = parseInt(heroHeight) - 120;
+    $("html, body").animate({ scrollTop: heroHeight.toString() + "px" }, "slow");
   })
 
   $('.offer-1, .offer-2').click(function(){
