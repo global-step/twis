@@ -97,6 +97,10 @@ footer.site-footer{
         li:first-of-type{
           margin-top: 20px;
         }
+        li.sub-less:first-of-type{
+          margin-top: 0;
+          a{font-weight: 700;}
+        }
         li:last-of-type{
           margin-bottom: 0;
         }

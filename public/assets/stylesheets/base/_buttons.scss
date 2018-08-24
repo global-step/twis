@@ -16,7 +16,7 @@
   transition: background-color $base-duration $base-timing, color $base-duration $base-timing, border $base-duration $base-timing;
   text-align: center;
   display: inline-block;
-
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   &:hover {
     // background-color: $dark;
     // border-color: $dark;
