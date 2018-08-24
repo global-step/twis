@@ -7,12 +7,15 @@
     .hero{
         background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/club.jpg');    
         background-size: 100%;
-        background-position: center 100px;
+        background-position: center 120px;
         margin-bottom: 120px;
         min-height: 680px;
-        
         @media(max-width: 1100px){
             background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Club+Activities/header-mobile.jpg');
+        }
+        @media(max-width: 768px){
+            min-height: 460px;
+            margin-bottom: 40px;
         }
         .contact-semi.open{
             height: 420px;

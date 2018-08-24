@@ -22,6 +22,9 @@
                 h1{letter-spacing: 0; font-size: 15px;}
                 .hero__content{margin-top: 30px;}
             }
+            @media(max-width: 768px){
+                min-height: 460px;
+            }
             .contact-semi.open{
                 height: 420px;
                 width: 520px;
