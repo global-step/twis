@@ -107,3 +107,7 @@ textarea {resize: vertical;}
  color:    #000;
  font-weight: 700;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
