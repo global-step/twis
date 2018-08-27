@@ -1,0 +1,90 @@
+// ------------------------------------------------------------
+// Tour
+// ------------------------------------------------------------
+.tour{
+// Hero
+// -------------------
+    .hero{
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/group.jpg');    
+        background-size: coover;
+        background-position: center 100px;
+        min-height: 880px;
+        overflow: auto;
+        h1{
+            font-size: 28px;
+            letter-spacing: 5px;
+            font-weight: 700;
+            text-align: left;
+        }
+        img{
+            width: 232px;
+            margin-top: -160px;
+        }
+        .side{
+            float: right;
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px 40px;
+            width: 35%;
+            max-width: 530px;
+            color: #000;
+            margin-top: 270px;
+            margin-right: 150px;
+        }
+        .blue{color: #2f5ebd;}
+        p{text-align: left; display: block; clear: both;}
+        a{
+            float: left;
+            background: #2fa4bd;
+            color: #fff;
+            padding: 12px 20px;
+            top: 40px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        ul{
+            text-align: left;
+            list-style-type: square;
+            &:last-of-type{margin-bottom: 30px;}
+            li{padding-left: 0;}
+        }
+        @media(max-width: 1200px){
+            .side{
+                float: none;
+                display: block;
+                margin: 340px auto 160px;
+                width: 80%;
+            }
+            a{top: 0}
+            // background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Home+Page/header_mobile.jpg');
+        }
+    }
+    .see-more{
+        text-align: center;
+        max-width: 1400px;
+        margin: 50px auto 90px;
+        padding: 0 90px;
+        .more-item{
+            display: inline-block;
+            vertical-align: top;
+            margin: 30px;
+            width: calc(100%/2 - 65px);
+            max-width: 500px;
+            height: 260px;
+            padding: 80px 20px;
+            background-size: cover;
+            font-size: 27px;
+            font-weight: 700;
+            span{display: block}
+            @media(max-width: 992px){
+            width: 100%;
+            display: block;
+            margin: 40px auto;
+            height: 220px;
+            }
+        }
+    }
+    footer.site-footer{margin-top: 0 !important}
+}
