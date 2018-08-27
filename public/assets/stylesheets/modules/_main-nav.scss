@@ -53,7 +53,7 @@
     }
     // direction aware hover
     p:before {
-      left: 50%;
+      left: 100%;
       transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
       content: '';
       height: 100%;
@@ -63,7 +63,7 @@
       width: 0;
       z-index: 11;
     }
-    p:hover:before, {
+    p:hover:before {
       border-bottom-color: $lightblue;
       width: 100%;
       top: 0;

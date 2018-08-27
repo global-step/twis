@@ -358,7 +358,7 @@
       margin: 0 50px;
       position: absolute;
       left: 10%;
-      top: -30px;
+      top: -45px;
     }
     .follow{
       float: right;
@@ -414,11 +414,13 @@
       font-size: 27px;
       font-weight: 700;
       span{display: block}
+      p {margin: inherit;}
       @media(max-width: 992px){
         width: 100%;
         display: block;
         margin: 40px auto;
         height: 220px;
+        p {margin: 10px 0 0;}
       }
     }
   }
@@ -435,10 +437,9 @@
       }
       &:last-of-type{
         float: right;
-        text-align: right;
+        padding-left: 15%;
         .logos{
-          float: right;
-          padding-right: 40px
+          padding-left: 40px;
         }
       }
       img{
@@ -458,6 +459,7 @@
         &:last-of-type{
           float: none;
           text-align: left;
+          padding-left: 0;
           .logos{
             float: none;
             padding-left: 40px;
