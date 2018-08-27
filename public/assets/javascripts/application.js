@@ -38,14 +38,20 @@ $( document ).ready(function() {
   })
 
   $('.elementary .scrollDown').click(function(){
+    $(this).parent().addClass('open')
+    $('.teacher, .secretary').removeClass('open')
     $('.members').addClass('elementaries').removeClass('secretaries').removeClass('teachers')
   })
 
   $('.teacher .scrollDown').click(function(){
+    $(this).parent().addClass('open')
+    $('.elementary, .secretary').removeClass('open')
     $('.members').addClass('teachers').removeClass('secretaries').removeClass('elementaries')
   })
 
   $('.secretary .scrollDown').click(function(){
+    $(this).parent().addClass('open')
+    $('.teacher, .elementary').removeClass('open')
     $('.members').addClass('secretaries').removeClass('teachers').removeClass('elementaries')
   })
 

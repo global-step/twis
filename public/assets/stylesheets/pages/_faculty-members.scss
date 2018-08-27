@@ -101,6 +101,24 @@
             h3{padding-top: 40px;}
             &:before{opacity: .95;}
         }
+        &:after{
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $midblue;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 9;
+            opacity: 0;
+        }
+        &.open:after{
+            opacity: 1;
+        }
     }
     .elementary, .secretary{
         background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/offer-1.jpg);
@@ -110,6 +128,7 @@
         &:before, .block{
             background: $lightblue;
         }
+        &:after{border-top: 12px solid $lightblue;}
     }
     @keyframes slide{
         100%{transform: translate3d(10px,0,0)}
@@ -142,31 +161,64 @@
             transition: $base-duration $base-timing;
             text-transform: uppercase;
             overflow: hidden;
+            // text-align: center;
+            .col-md-2{
+                float: none;
+                display: inline-block;
+                vertical-align: top;
+                width: calc(100% / 6 - 3px);
+                margin-bottom: 50px;
+            }
+            img{
+                width: 120px;
+                display: block;
+                margin: 0 auto;
+            }
             strong{
                 font-size: 18px;
-                margin: 30px auto 10px;
+                margin: 30px auto 0;
+                display: block;
             }
             p{
                 color: #aeaeae;
                 font-size: 16px;
             }
+            @media(max-width: 991px){
+                .col-md-2{
+                    width: 100%;
+                    display: block;
+                    margin: 30px auto 80px;
+                    img{
+                        width: 220px;
+                    }
+                }
+            }
         }
         &.elementaries{
-            max-height: 100vh;
+            max-height: 1000vh;
+            overflow: initial;
+            padding: 70px;
             .elementary-list{
-                max-height: 100vh;
+                max-height: 1000vh;
+                overflow: initial;
             }
         }
         &.teachers{
-            max-height: 100vh;
+            max-height: 1000vh;
+            overflow: initial;
+            padding: 70px;
             .teachers-list{
-                max-height: 100vh;
+                max-height: 1000vh;
+                overflow: initial;
             }
         }
         &.secretaries{
-            max-height: 100vh;
+            max-height: 1000vh;
+            overflow: initial;
+            padding: 70px;
             .secretary-list{
-                max-height: 100vh;
+                max-height: 1000vh;
+                overflow: initial;
             }
         }
     }
