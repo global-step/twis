@@ -42,5 +42,9 @@
   "contact": {
     "bodyclass": "contact",
     "template": "default"
+  },
+  "tour": {
+    "bodyclass": "tour",
+    "template": "default"
   }
 }
