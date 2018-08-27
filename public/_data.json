@@ -11,6 +11,10 @@
     "bodyclass": "special-offers",
     "template": "default"
   },
+  "faculty-members": {
+    "bodyclass": "faculty-members",
+    "template": "default"
+  },
   "yearly-schedule": {
     "bodyclass": "yearly-schedule",
     "template": "default"

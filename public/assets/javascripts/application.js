@@ -28,13 +28,25 @@ $( document ).ready(function() {
   })
 
   $('.scrollDown').click(function(){
-    var heroHeight = $('.hero').css('height')
+    var heroHeight = $('header + div').css('height')
     var heroHeight = parseInt(heroHeight) - 120;
     $("html, body").animate({ scrollTop: heroHeight.toString() + "px" }, "slow");
   })
 
   $('.offer-1, .offer-2').click(function(){
     $(this).toggleClass('open');
+  })
+
+  $('.elementary .scrollDown').click(function(){
+    $('.members').addClass('elementaries').removeClass('secretaries').removeClass('teachers')
+  })
+
+  $('.teacher .scrollDown').click(function(){
+    $('.members').addClass('teachers').removeClass('secretaries').removeClass('elementaries')
+  })
+
+  $('.secretary .scrollDown').click(function(){
+    $('.members').addClass('secretaries').removeClass('teachers').removeClass('elementaries')
   })
 
 }); //eo:doc ready
