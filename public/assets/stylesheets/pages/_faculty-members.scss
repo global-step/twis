@@ -120,15 +120,50 @@
             opacity: 1;
         }
     }
-    .elementary, .secretary{
-        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/offer-1.jpg);
+    .elementary{
+        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/elementary-school-desktop.jpg);
     }
     .teacher{
-        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/offer-2.jpg);
+        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/middle-school-desktop.jpg);
         &:before, .block{
             background: $lightblue;
         }
         &:after{border-top: 12px solid $lightblue;}
+    }
+    .secretary{
+        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/school-office-desktop.jpg);
+    }
+    .mobile{display: none}
+    @media(max-width: 991px){
+        .elementary, .teacher, .secretary{
+            height: 380px;
+            min-height: 0;
+            .block{display: none;}
+        }
+        .elementary{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/elementary-school-mobile.jpg);}
+        .teacher{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/middle-school-mobile.jpg);}
+        .secretary{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/Faculty+Members/school-office-mobile.jpg);}
+        .select-wrap{
+            background: #2f72bd;
+            padding: 10px 20px;
+            width: 80%;
+            margin: -25px auto 50px;
+            z-index: 2;
+            position: relative;
+        }
+        .mobile{display: block;}
+        select{
+            position: relative;
+            background: #2f72bd;
+            height: 50px;
+            border: 0;
+            color: #fff;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            option{
+                -webkit-border-radius: 0;
+            }
+        }
     }
     @keyframes slide{
         100%{transform: translate3d(10px,0,0)}
@@ -194,28 +229,31 @@
                 }
             }
         }
-        &.elementaries{
+        &.elementary-show{
             max-height: 1000vh;
             overflow: initial;
             padding: 70px;
+            @media(max-width: 991px){ padding-top: 0; }
             .elementary-list{
                 max-height: 1000vh;
                 overflow: initial;
             }
         }
-        &.teachers{
+        &.teacher-show{
             max-height: 1000vh;
             overflow: initial;
             padding: 70px;
+            @media(max-width: 991px){ padding-top: 0; }
             .teachers-list{
                 max-height: 1000vh;
                 overflow: initial;
             }
         }
-        &.secretaries{
+        &.secretary-show{
             max-height: 1000vh;
             overflow: initial;
             padding: 70px;
+            @media(max-width: 991px){ padding-top: 0; }
             .secretary-list{
                 max-height: 1000vh;
                 overflow: initial;

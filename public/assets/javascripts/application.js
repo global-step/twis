@@ -40,19 +40,24 @@ $( document ).ready(function() {
   $('.elementary .scrollDown').click(function(){
     $(this).parent().addClass('open')
     $('.teacher, .secretary').removeClass('open')
-    $('.members').addClass('elementaries').removeClass('secretaries').removeClass('teachers')
+    $('.members').addClass('elementary-show').removeClass('secretary-show').removeClass('teacher-show')
   })
 
   $('.teacher .scrollDown').click(function(){
     $(this).parent().addClass('open')
     $('.elementary, .secretary').removeClass('open')
-    $('.members').addClass('teachers').removeClass('secretaries').removeClass('elementaries')
+    $('.members').addClass('teacher-show').removeClass('secretary-show').removeClass('elementary-show')
   })
 
   $('.secretary .scrollDown').click(function(){
     $(this).parent().addClass('open')
     $('.teacher, .elementary').removeClass('open')
-    $('.members').addClass('secretaries').removeClass('teachers').removeClass('elementaries')
+    $('.members').addClass('secretary-show').removeClass('teacher-show').removeClass('elementary-show')
+  })
+
+  $('#select').change(function(){
+    $('.members').removeClass('secretary-show').removeClass('teacher-show').removeClass('elementary-show')
+    $('.members').addClass(this.value + '-show')
   })
 
 }); //eo:doc ready
