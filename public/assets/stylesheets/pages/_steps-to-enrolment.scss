@@ -5,14 +5,14 @@
     // Hero
     // -------------------
     .hero{
-        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Educational+Policy/header-desktop.jpg');    
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Steps+to+Enrolment/steps-to-enrollment-header-desktop.jpg');    
         background-size: 100%;
         background-position: center 100px;
         margin-bottom: 120px;
         min-height: 580px;
         
         @media(max-width: 1100px){
-            background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Educational+Policy/header-mobile.jpg');
+            background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Steps+to+Enrolment/steps-to-enrollment-header-mobile.jpg');
         }
         @media(max-width: 768px){
             min-height: 460px;
@@ -26,51 +26,53 @@
             > img{transform: rotate(0deg) translate3d(-10px,150px,0);}
         }
     }
-    a{
-        color: #2fa4bd;
-        text-decoration: underline;
-    }
-    
-    .background--blue{
-        background: #2f5ebd;
-        padding: 20px 30px;
-        margin-bottom: 70px;
-        margin-top: 0 !important;
-        overflow: auto;
-        h4, .greyblue{
-            color: #a8c4f1;
+    .content-wrapper{
+        a{
+            color: #2fa4bd;
+            text-decoration: underline;
         }
-        p{margin-bottom: 45px;}
-        h5{
-            font-style: italic;
-            span{color: #224387; font-style: normal; margin-left: 5px;}
-        } 
-        ul{
-            list-style: none;
-            margin: 40px 0;
-            padding: 0;
-            li{
-                border-bottom: 1px solid #597eca;
-                padding: 0 20px 20px 0;
-                margin: 0 0 30px;
-                font-size: 14px;
-                &:last-of-type{border: none;}
+        
+        .background--blue{
+            background: #2f5ebd;
+            padding: 20px 30px;
+            margin-bottom: 70px;
+            margin-top: 0 !important;
+            overflow: auto;
+            h4, .greyblue{
+                color: #a8c4f1;
             }
-            &:last-of-type li{border-bottom: 1px solid #597eca;}
+            p{margin-bottom: 45px;}
+            h5{
+                font-style: italic;
+                span{color: #224387; font-style: normal; margin-left: 5px;}
+            } 
+            ul{
+                list-style: none;
+                margin: 40px 0;
+                padding: 0;
+                li{
+                    border-bottom: 1px solid #597eca;
+                    padding: 0 20px 20px 0;
+                    margin: 0 0 30px;
+                    font-size: 14px;
+                    &:last-of-type{border: none;}
+                }
+                &:last-of-type li{border-bottom: 1px solid #597eca;}
+            }
+            @media(max-width: 991px){
+                margin: 0 20px;
+            }   
         }
-        @media(max-width: 991px){
-            margin: 0 20px;
-        }   
-    }
-    h3{margin-bottom: 35px; margin-top: 20px; }
-    .col-md-7{margin-bottom: 50px;}
-    p.text--blue{
-        font-weight: 700;
-        color: #2f5ebd;
-        margin-top: 45px;
-    }
-    p.text--grey{
-        color: grey;
+        h3{margin-bottom: 35px; margin-top: 20px; }
+        .col-md-7{margin-bottom: 50px;}
+        p.text--blue{
+            font-weight: 700;
+            color: #2f5ebd;
+            margin-top: 45px;
+        }
+        p.text--grey{
+            color: grey;
+        }
     }
         
 }

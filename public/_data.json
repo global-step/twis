@@ -50,5 +50,9 @@
   "steps-to-enrolment": {
     "bodyclass": "steps-to-enrolment",
     "template": "default"
+  },
+  "tuition": {
+    "bodyclass": "tuition",
+    "template": "default"
   }
 }

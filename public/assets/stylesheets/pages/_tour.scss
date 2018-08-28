@@ -5,11 +5,14 @@
 // Hero
 // -------------------
     .hero{
-        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/group.jpg');    
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Tour/school-tour-header-desktop.jpg');    
         background-size: coover;
         background-position: center 100px;
         min-height: 880px;
         overflow: auto;
+        @media(max-width: 1100px){
+            background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Tour/school-tour-header-mobile.jpg');
+        }
         h1{
             font-size: 28px;
             letter-spacing: 5px;

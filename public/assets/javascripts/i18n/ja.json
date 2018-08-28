@@ -275,7 +275,32 @@
     "steps-h4-2": "中学部",
     "steps-li-7": "12歳であること",
     "steps-li-8": "14歳であること",
-    "steps-li-9": "13歳であること"
+    "steps-li-9": "13歳であること",
+    "tuition-title": "費用",
+    "tuition-type-title": "学費",
+    "tuition-price-title": "金額",
+    "tuition-row-1-1": "入学時",
+    "tuition-row-1-2": "入学金",
+    "tuition-row-1-price": "¥250,000",
+    "tuition-row-2-1": "年１回",
+    "tuition-row-2-2": "施設費",
+    "tuition-row-2-price": "¥150,000",
+    "tuition-row-3-1": "教材・文具費",
+    "tuition-row-3-price": "¥150,000",
+    "tuition-row-4-1": "諸経費",
+    "tuition-row-4-2": "(健康診断費・防災費等)",
+    "tuition-row-4-price": "¥25,000",
+    "tuition-row-5-1": "学校助成費",
+    "tuition-row-5-price": "¥50,000",
+    "tuition-row-6-1": "毎月固定",
+    "tuition-row-6-2": "授業料",
+    "tuition-row-6-price": "¥95,000",
+    "tuition-text-1": "- 入学選考/出願料20,000円(税込み)",
+    "tuition-text-2": "- 基本費用（円）全学年共通",
+    "tuition-text-3": "- 費用は、学期ごとに分割納入が可能です。",
+    "tuition-text-4": "- その他の費用（円）",
+    "tuition-text-5": "- ランチ代（希望者）：月額12,000",
+    "tuition-text-6": "- バス（希望者）：月額8,000ー16,000"
 
 }
 
