@@ -54,5 +54,9 @@
   "tuition": {
     "bodyclass": "tuition",
     "template": "default"
+  },
+  "school-bus": {
+    "bodyclass": "school-bus",
+    "template": "default"
   }
 }
