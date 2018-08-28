@@ -46,6 +46,7 @@
     p{
       margin: 0;
       padding: 48px 20px 48px;
+      font-weight: 600;
       &:hover{
         color: $lightblue !important;  
       }
@@ -62,7 +63,7 @@
       width: 0;
       z-index: 11;
     }
-    p:hover:before, {
+    p:hover:before {
       border-bottom-color: $lightblue;
       width: 100%;
       top: 0;

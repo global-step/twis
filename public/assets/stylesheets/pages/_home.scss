@@ -33,8 +33,8 @@
         text-decoration: none;
         filter: brightness(1.1);
         img{
-          // transform: translate3d(10px,0,0);
-          transform: rotate(-90deg);
+          transform: translate3d(10px,0,0);
+          // transform: rotate(-90deg);
         }
       }
       img{
@@ -249,29 +249,40 @@
 
   .location{
     text-align: center;
-    .location-item{
+    .location-box {
       display: inline-block;
       vertical-align: top;
-      width: 200px;
-      // height: 200px;
-      padding: 35px;
-      transition: $base-duration $base-timing;
-      background-repeat: no-repeat;
-      background-size: contain;
-      text-align: center;
       margin: 30px 5%;
-      img{
-        width: 80px;
-        height: 80px;
-        display: block;
-        margin: 25px auto;
+      .location-item{
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        // height: 200px;
+        padding: 35px;
+        transition: $base-duration $base-timing;
+        // background-repeat: no-repeat;
+        background-size: contain;
+        text-align: center;
+        margin: 30px 0;
+        img{
+          width: 80px;
+          height: 80px;
+          display: block;
+          margin: 25px auto;
+        }
+        p{
+          margin: 100px auto 0; 
+        }
+        &:hover{
+          transform: scale(1.1);
+          text-decoration: none;
+          filter: brightness(1.1);
+        }
       }
-      p{
-        margin: 100px auto 0; 
+      @media (max-width: 1100px) {
+        display: block; 
+        margin: 30px auto;
       }
-    }
-    @media (max-width: 1100px) {
-      .location-item{display: block; margin: 30px auto;}
     }
   }
 
@@ -347,7 +358,7 @@
       margin: 0 50px;
       position: absolute;
       left: 10%;
-      top: -30px;
+      top: -45px;
     }
     .follow{
       float: right;
@@ -403,11 +414,13 @@
       font-size: 27px;
       font-weight: 700;
       span{display: block}
+      p {margin: inherit;}
       @media(max-width: 992px){
         width: 100%;
         display: block;
         margin: 40px auto;
         height: 220px;
+        p {margin: 10px 0 0;}
       }
     }
   }
@@ -424,10 +437,9 @@
       }
       &:last-of-type{
         float: right;
-        text-align: right;
+        padding-left: 15%;
         .logos{
-          float: right;
-          padding-right: 40px
+          padding-left: 40px;
         }
       }
       img{
@@ -447,6 +459,7 @@
         &:last-of-type{
           float: none;
           text-align: left;
+          padding-left: 0;
           .logos{
             float: none;
             padding-left: 40px;
