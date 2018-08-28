@@ -1,0 +1,97 @@
+// ------------------------------------------------------------
+// tuition
+// ------------------------------------------------------------
+.tuition{
+// Hero
+// -------------------
+    .hero{
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Tuition/tuition-header-desktop.jpg');    
+        background-size: 100%;
+        background-position: center 100px;
+        margin-bottom: -40px;
+        min-height: 580px;
+        h1{
+            font-size: 17px;
+            letter-spacing: 3px;
+        }
+        span{display: block; margin-top: 30px;}
+        @media(max-width: 1100px){
+            background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Tuition/tuition-header-mobile.jpg');
+            background-position: center 120px;
+            margin-bottom: -90px;
+            h1{letter-spacing: 0; font-size: 15px;}
+            .hero__content{margin-top: 30px;}
+        }
+        @media(max-width: 768px){
+            min-height: 460px;
+        }
+        .contact-semi.open{
+            height: 420px;
+            width: 520px;
+            right: -140px;
+            top: 23%;
+            > img{transform: rotate(0deg) translate3d(-10px,150px,0);}
+        }
+    }
+    .content-wrapper{
+        z-index: 9; position: relative;
+        strong{font-weight: 700;}
+        p{
+            font-weight: 700;
+            max-width: 800px;
+            width: 100%;;
+            margin: 0 auto 20px;
+            &.indent{
+                margin-bottom: 5px;
+                font-weight: 400;
+                text-indent: 30px;
+            }
+        }
+    }
+    h2{ 
+        width: 100%;
+        padding: 20px 40px;
+        background: #2fa4bd;
+        line-height: 1;
+        margin-bottom: 0;
+        letter-spacing: 25px;
+        text-align: center;
+        max-width: 800px;
+        width: 100%;;
+        margin: 0 auto;
+    }
+    table{
+        border-top: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+        background: #fff;
+        table-layout: fixed;
+        max-width: 800px;
+        margin: 0 auto 50px;
+        width: 100%;
+        tr{
+            border-bottom: 1px solid #d9d9d9;
+        }
+        td{
+            padding: 35px;
+            border-right: 1px solid #d9d9d9;
+            font-size: 14px;
+            strong{font-weight: 700;}
+            .grey{font-size: 12px; margin-left: 10px;}
+        }
+    }
+    @media(max-width: 1100px){
+        h2{
+            letter-spacing: 1px;
+            margin-right: 0;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+        .content-wrapper .row{margin: 0 20px;}
+        table{
+            td{
+                padding: 25px;
+            }
+        }
+    }
+    
+}

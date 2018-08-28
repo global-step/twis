@@ -63,3 +63,9 @@ a img{outline: 0;}
 }
 
 .arrow{width: 15px;}
+
+.mobile{display: none}
+@media (max-width: 991px) {
+  .desktop{display: none;}
+  .mobile{display: block}
+}
