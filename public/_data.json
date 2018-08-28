@@ -62,5 +62,10 @@
   "school-gallery": {
     "bodyclass": "school-gallery",
     "template": "default"
+  },
+  "facility-gallery": {
+    "bodyclass": "facility-gallery",
+    "template": "default"
   }
+  
 }
