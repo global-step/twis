@@ -129,7 +129,7 @@
   .contact-semi{
     position: absolute;
     right: 0;
-    transform: translate3d(220px,0,0) ;
+    transform: translate3d(110px,0,0) ;
     top: 35%;
     border-radius: 50%;
     padding: 30px 65px;
@@ -141,7 +141,7 @@
     cursor: pointer;
     z-index: 10;
     transition: $slow $base-timing;
-    opacity: 0;
+    // opacity: 0;
     animation: slide .8s ease-in forwards;
     &:hover{
       filter: brightness(1.1);
