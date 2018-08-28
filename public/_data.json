@@ -58,5 +58,9 @@
   "school-bus": {
     "bodyclass": "school-bus",
     "template": "default"
+  },
+  "school-gallery": {
+    "bodyclass": "school-gallery",
+    "template": "default"
   }
 }
