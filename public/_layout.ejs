@@ -76,6 +76,19 @@
     <script src="/assets/javascripts/lib/url/url.min.js"></script>
     <script src="/assets/javascripts/i18n.js" async defer></script>
 
+    <% if(bodyclass == "facility-gallery" || bodyclass == "school-gallery") { %>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+      <script>
+        $.fancybox.defaults.animationEffect = "fade";
+        $.fancybox.defaults.transitionEffect = "zoom-in-out";
+        $.fancybox.defaults.infobar = false;
+        $.fancybox.defaults.toolbar = false;
+
+        
+      </script>
+    <% } %>
+
   </body>
 
 </html>
