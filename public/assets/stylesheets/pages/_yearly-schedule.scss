@@ -55,6 +55,9 @@
         td{
             padding: 35px;
             border-right: 1px solid #d9d9d9;
+            span.grey {
+                color: #a7a7a7;
+            }
             &:nth-of-type(odd){
                 text-align: center; 
                 width: 200px;
