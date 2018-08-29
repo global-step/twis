@@ -60,5 +60,9 @@ $( document ).ready(function() {
     $('.members').addClass(this.value + '-show')
   })
 
+  $('.hachioji, .machida, .yokota, .tachikawa').click(function(){
+    console.log($(this))
+  })
+
 }); //eo:doc ready
  

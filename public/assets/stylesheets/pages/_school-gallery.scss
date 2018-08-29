@@ -52,26 +52,18 @@
         opacity: 0;
         &:after{
             content: '';
-            // border: 2px solid #2fa4bd;
-            // border-radius: 50%;
-            // color: #2fa4bd;
             background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/close.svg') no-repeat;
             position: absolute;
             top: 30px;
             right: 30px;
             height: 38px;
             width: 38px;
-            // font-size: 23px;
-            // text-align: center;
-            // font-family: monospace;
             cursor: pointer;
         }
         .fancybox-button{
             opacity: 1;
             visibility: visible;
             background: transparent;
-            // border: 2px solid #2fa4bd;
-            // border-radius: 50%;
             padding: 0;
             &.fancybox-button--arrow_right{
                 right: 30px;

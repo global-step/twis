@@ -25,203 +25,43 @@
             .hero__content{top: 275px;}
         }
     }
-
     @keyframes bounce{
         100%{bottom: 80px;}
     }
-
-    .hachioji,
-    .machida,
-    .yokota,
-    .tachikawa{
-        transition: $base-duration $base-timing;
-        color: #fff;
-        text-align: center;
-        background: $midblue;
-        h3, a, p, img{z-index: 99; position: relative; display: block;}
-        h3.block{
-            @include font-family();
-            padding-top: 100px;
-            font-size: 16px;
-            font-weight: normal;
-            margin-bottom: 30px;
-            transition: $base-duration $base-timing; 
-            padding: 30px 10px;
-            margin: 0;
-            text-align: center;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        &:before{
-            content: '';
-            background: $midblue;
-            opacity: 0.9;
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            left: 0;
-            top: 0;
-            transition: $base-duration $base-timing;
-        }
-        &:after{
-            content: '';
-            width: 0; 
-            height: 0; 
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-top: 12px solid $midblue;
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 9;
-        }
-        &:nth-of-type(even){
-            &:before{
-                background: $lightblue;
-            }
-            &:after{border-top: 12px solid $lightblue;}
-        }
-    }
     .mobile{display: none}
     @media(max-width: 991px){
-        .select-wrap{
-            background: #2f72bd;
-            padding: 10px 20px;
-            width: 80%;
-            margin: -25px auto 50px;
-            z-index: 2;
-            position: relative;
-        }
-        .mobile{display: block;}
-        select{
-            position: relative;
-            background: #2f72bd;
-            height: 50px;
-            border: 0;
-            color: #fff;
-            -webkit-border-radius: 0;
-            border-radius: 0;
-            option{
-                -webkit-border-radius: 0;
-            }
+        .row {
+            width: 100%;
+            margin: 0;
         }
     }
     @keyframes slide{
         100%{transform: translate3d(10px,0,0)}
     }
-    .mobile-reveal{
-        display: none;
-        @media(max-width: 1100px){
-            display: block;
-            transition: $base-duration $base-timing;
-            max-height: 0;
-            overflow: hidden;
-            background: #2f72bd;
-            text-align: center;
-            color: #fff;
-
-            p{font-size: 18px;}
-            a{
-                display: block;
-                margin-top: 70px;
-            }
-        }
-    }
-    .members{
-        max-height: 0;
-        transition: $base-duration $base-timing;
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-        overflow: hidden;
-        .list{
-            max-height: 0;
-            transition: $base-duration $base-timing;
-            text-transform: uppercase;
-            overflow: hidden;
-            // text-align: center;
-            .col-md-2{
-                float: none;
-                display: inline-block;
-                vertical-align: top;
-                width: calc(100% / 6 - 3px);
-                margin-bottom: 50px;
-            }
-            img{
-                width: 120px;
-                display: block;
-                margin: 0 auto;
-            }
-            strong{
-                font-size: 18px;
-                margin: 30px auto 0;
-                display: block;
-            }
-            p{
-                color: #aeaeae;
-                font-size: 16px;
-            }
-            @media(max-width: 991px){
-                .col-md-2{
-                    width: 100%;
-                    display: block;
-                    margin: 30px auto 80px;
-                    img{
-                        width: 220px;
-                    }
-                }
-            }
-        }
-        &.elementary-show{
-            max-height: 1000vh;
-            overflow: initial;
-            padding: 70px;
-            @media(max-width: 991px){ padding-top: 0; }
-            .elementary-list{
-                max-height: 1000vh;
-                overflow: initial;
-            }
-        }
-        &.teacher-show{
-            max-height: 1000vh;
-            overflow: initial;
-            padding: 70px;
-            @media(max-width: 991px){ padding-top: 0; }
-            .teachers-list{
-                max-height: 1000vh;
-                overflow: initial;
-            }
-        }
-        &.secretary-show{
-            max-height: 1000vh;
-            overflow: initial;
-            padding: 70px;
-            @media(max-width: 991px){ padding-top: 0; }
-            .secretary-list{
-                max-height: 1000vh;
-                overflow: initial;
-            }
-        }
-    }
-
-    .offer-1, .offer-2{
+    .hachioji,
+    .machida,
+    .yokota,
+    .tachikawa{
         background-size: cover;
         transition: $base-duration $base-timing;
         color: #fff;
-        min-height: 640px;
+        height: 640px;
         text-align: center;
         padding: 80px 40px;
-        @media(max-width: 1100px){
-            min-height: 480px;
-            .reveal{display: none !important;}
-            &:hover{
-                h3{padding-top: 100px !important}
-                p:first-of-type{margin-bottom: 20px !important; } 
-            }
-            &.open + .mobile-reveal{
-                min-height: 480px;
-                max-height: 500px;
-                padding: 180px 40px 80px;
+        @media(max-width: 991px){
+            height: 530px;
+            padding: 0 40px;
+            &:after{
+                content: '';
+                background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/close.svg') no-repeat;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                height: 38px;
+                width: 38px;
+                cursor: pointer;
+                opacity: 0;
+                transition: $base-duration $base-timing;
             }
         }
         h3, a, p{z-index: 99; position: relative; display: block;}
@@ -229,9 +69,13 @@
             padding-top: 100px;
             font-size: 38px;
             margin-bottom: 30px;
+            letter-spacing: 5px;
+            font-weight: 400;
             transition: $base-duration $base-timing; 
         }
-        p{font-size: 18px; transition: margin $base-duration $base-timing; }
+        p{
+            transition: margin $base-duration $base-timing; 
+        }
         a{
             &:hover img{animation: slide .5s cubic-bezier(0.39, 0.58, 0.57, 1) infinite alternate;}
             img{
@@ -243,8 +87,42 @@
             transition: $base-duration $base-timing; 
             overflow: hidden; 
             opacity: 0;
-            font-size: 12px;
             color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            img{
+                width: 30px;
+                display: block;
+                margin: 10px auto;
+                &.school{width: 40px;}
+            }
+            .grey{
+                color: #b9b9b9;
+                margin-left: 10px;
+            }
+        }
+        .time{
+            span{
+                float: left;
+            }
+            span:last-of-type{
+                float: right;
+            }
+        }
+        .arrows{
+            .left, .right{
+                position: absolute;
+                width: 20px;
+                left: 10px;
+                transform: rotate(90deg);
+                top: 0;
+                opacity: 0.5;
+            }
+            .right{
+                left: initial;
+                right: 10px;
+                transform: rotate(-90deg);
+            }
         }
         &:before{
             content: '';
@@ -264,20 +142,21 @@
             p.reveal{
                 margin-bottom: 20px;    
             }
-            p:first-of-type{margin-bottom: 100px; }  
+            // p:first-of-type{margin-bottom: 100px; }  
             a{margin-top: 90px; }
             h3{padding-top: 40px;}
             &:before{opacity: .95;}
         }
     }
-    .offer-1{
-        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/offer-1.jpg);
-    }
-    .offer-2{
-        background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/offer-2.jpg);
-        &:before{
-            background: $lightblue;
-        }
+    .hachioji{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/01.jpg);}
+    .machida{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/02.jpg); &:before{background: $lightblue;}}
+    .yokota{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/03.jpg);}
+    .tachikawa{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/04.jpg); &:before{background: $lightblue;}}
+    @media(max-width: 991px){
+        .hachioji{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/01-mobile.jpg);}
+        .machida{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/02-mobile.jpg);}
+        .yokota{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/03-mobile.jpg);}
+        .tachikawa{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/04-mobile.jpg);}
     }
     @keyframes slide{
         100%{transform: translate3d(10px,0,0)}
