@@ -323,7 +323,26 @@
     "tuition-text-6": "- バス（希望者）：月額8,000ー16,000",
     "facility-gallery-h1-p": "2015年に新設した八王子キャンパスは、防犯・防災・安全を最優先に最新設備を完備した快適な学習環境です。教室内には太陽の光があふれ、窓の外には自然が広がり、美しい四季の変化が楽しめます。",
     "facility-gallery-h1": "施設写真",
-    "school-gallery-h1": "スクールギャラリー"
+    "school-gallery-h1": "スクールギャラリー",
+    "bus-h1-1": "学校まではスクールバスで、八王子駅より10分、立川駅より30分、玉川上水駅より40分、",
+    "bus-h1-2": "多摩センター駅より40分、国立駅より45分、町田駅より60分で到着します。 バス停へのお迎えは5分前までにお願い致します。",
+    "hachioji-title": "Hachioji",
+    "hachioji-home": "八王子駅",
+    "hachioji-home-span": "(北口)",
+    "hachioji-school": "東京ウエストインターナショナルスクール",
+    "machida-title": "Machida",
+    "machida-home": "町田駅",
+    "machida-stop": "多摩センター駅",
+    "machida-school": "多摩センター駅",
+    "yokota-title": "Yokota",
+    "yokota-home": "横田エアベース",
+    "yokota-home-span": "(東口)",
+    "yokota-stop": "昭島駅（北口）",
+    "yokota-school": "東京ウエストインターナショナルスクール",
+    "tachikawa-title": "Tachikawa",
+    "tachikawa-home": "玉川上水駅",
+    "tachikawa-stop": "立川南駅", 
+    "tachikawa-school": "東京ウエストインターナショナルスクール"
 
 }
 

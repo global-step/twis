@@ -9,6 +9,15 @@
         background-size: 100%;
         background-position: center 100px;
         min-height: 87vh;
+        .hero__content{
+            top: 50%;
+            width: 80%;
+            h1{
+                font-size: 28px;
+                line-height: 2.5;
+                span{display: block}
+            }
+        } 
         img{
             width: 32px;
             transition: bottom $base-duration $base-timing;
@@ -23,6 +32,18 @@
         @media(max-width: 1100px){
             min-height: 70vh;
             .hero__content{top: 275px;}
+        }
+        @media(max-width: 991px){
+            height: 700px;
+            .hero__content{
+                top: 210px;
+                width: 100%;
+                h1{
+                    font-size: 16px;
+                    line-height: 2.5;
+                    span{margin-bottom: 20px;}
+                }
+            } 
         }
     }
     @keyframes bounce{
