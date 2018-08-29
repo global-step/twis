@@ -66,6 +66,9 @@
   "facility-gallery": {
     "bodyclass": "facility-gallery",
     "template": "default"
+  },
+  "security": {
+    "bodyclass": "security",
+    "template": "default"
   }
-  
 }
