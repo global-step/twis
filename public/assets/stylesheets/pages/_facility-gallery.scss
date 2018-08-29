@@ -13,6 +13,7 @@
         .hero__content p{
             font-size: 18px;
             line-height: 2.2;
+            padding: 0 40px;
         }
         @media(max-width: 1100px){
             background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Facility+Gallery/facility-header-mobile.jpg');
@@ -46,7 +47,65 @@
     p.text--grey{
         color: grey;
     }
-
+    .fancybox-image{
+        // padding: 50px 150px;
+        // box-sizing: content-box;
+        // background: white;
+    }
+    .fancybox-navigation{
+        background: white;
+        width: 60%;
+        height: 60%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 210px;
+        position: absolute;
+        @media(max-width: 1100px){
+            width: 80%;
+        }
+        &:after{
+            content: '';
+            // border: 2px solid #2fa4bd;
+            // border-radius: 50%;
+            // color: #2fa4bd;
+            background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/close.svg') no-repeat;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            height: 38px;
+            width: 38px;
+            // font-size: 23px;
+            // text-align: center;
+            // font-family: monospace;
+            cursor: pointer;
+        }
+        .fancybox-button{
+            opacity: 1;
+            visibility: visible;
+            background: transparent;
+            // border: 2px solid #2fa4bd;
+            // border-radius: 50%;
+            padding: 0;
+            &.fancybox-button--arrow_right{
+                right: 30px;
+                background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-right.svg') no-repeat;
+            }
+            &.fancybox-button--arrow_left{
+                left: 30px;
+                background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-left.svg') no-repeat;
+            }
+            svg{
+                display: none;
+                path {
+                    fill: transparent;
+                    stroke: #2fa4bd;
+                    stroke-linejoin: round;
+                    stroke-width: 3;
+                }
+            } 
+        }
+    }
     .gallery{
         padding: 0 40px 30px;
         text-align: center;
@@ -71,6 +130,9 @@
             margin-top: 0;
             padding: 0px 40px;
             img{margin-top: 50px;}
+            .col-12{
+                pointer-events: none;
+            }
         } 
     }
         
