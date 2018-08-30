@@ -1,0 +1,67 @@
+// ------------------------------------------------------------
+// boost-program
+// ------------------------------------------------------------
+.boost-program{
+    // Hero
+    // -------------------
+    .hero{
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Boost+Program/boost-program-header-desktop.jpg');    
+        background-size: 100%;
+        background-position: center 100px;
+        margin-bottom: 120px;
+        min-height: 580px;
+        
+        @media(max-width: 1100px){
+            background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Boost+Program/boost-program-header-mobile.jpg');
+        }
+        .contact-semi.open{
+            height: 420px;
+            width: 520px;
+            right: -140px;
+            top: 23%;
+            > img{transform: rotate(0deg) translate3d(-10px,150px,0);}
+        }
+    }
+    
+    .background--blue{
+        background: #2f5ebd;
+        padding: 20px 40px;
+        margin-bottom: 70px;
+        margin-top: 0 !important;
+        h4{
+            color: #a8c4f1;
+        }
+        p{margin-bottom: 45px;}
+        h5{
+            font-style: italic;
+            span{color: #224387; font-style: normal; margin-left: 5px;}
+        } 
+    }
+    h3{margin-bottom: 35px; margin-top: 50px; &:last-of-type{margin-top: 80px;}}
+    .col-md-7{margin-bottom: 50px;}
+    p.text--blue{
+        font-weight: 700;
+        color: #2f5ebd;
+        margin-top: 45px;
+    }
+    p.text--grey{
+        color: grey;
+    }
+
+    .five-year{
+        margin-top: 40PX;
+        border: 3px solid #2f5ebd;
+        padding: 60px 40px;
+        text-align: center;
+        h3{margin-top: 20px;}
+        p{font-size: 14px;};
+        img{
+            margin: -160px auto 0;
+            width: 150px;
+            background: #fff;
+            padding: 20px 40px;
+            box-sizing: content-box;
+        }
+    }
+        
+}

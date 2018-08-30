@@ -70,5 +70,9 @@
   "security": {
     "bodyclass": "security",
     "template": "default"
+  },
+  "boost-program": {
+    "bodyclass": "boost-program",
+    "template": "default"
   }
 }
