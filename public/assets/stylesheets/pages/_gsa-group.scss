@@ -43,6 +43,9 @@
             position: absolute;
             bottom: -28px;
             left: 40px;
+            &:hover img {
+              transform: translate3d(10px,0,0);
+            }
         }
         ul{
             text-align: left;
