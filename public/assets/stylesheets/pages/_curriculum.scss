@@ -5,19 +5,36 @@
     // Hero
     // -------------------
     .hero{
-        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/curriculum.jpg');    
+        background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Curriculum/header-desktop.jpg');    
         background-size: 100%;
         background-position: center 100px;
         margin-bottom: 120px;
         min-height: 680px;
         
+        @media(min-width: 1101px){
+            .hero-icons {
+                position: absolute;
+                top: 41%;
+                left: 0;
+                right: 0;
+                img {
+                    width: 12%;
+                    padding: 40px;
+                    display: inline-block;
+                }
+            }
+        }
         @media(max-width: 1100px){
             background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Curriculum/header-mobile.jpg');
+            .hero-icons.desktop {
+                display: none;
+            }
         }
         @media(max-width: 768px){
             min-height: 460px;
             margin-bottom: 40px;
         }
+        
         .contact-semi.open{
             height: 420px;
             width: 520px;
@@ -30,6 +47,11 @@
         margin-bottom: 35px; 
         margin-top: 50px; 
         font-size: 18px;
+    }
+    p {
+        letter-spacing: normal;
+        line-height: 1.5;
+        &.grey {line-height: 2; font-weight: 600;}
     }
     .col-md-7{margin-bottom: 50px;}
     p.text--blue{
@@ -66,6 +88,26 @@
             padding: 0px 40px;
             img{margin-top: 50px;}
         } 
+    }
+    @media(max-width: 500px){
+        .icons{
+            padding: 0px 10px;
+        }
+        .hero {
+            min-height: 430px;
+            .hero__content.offset {
+                padding: 20px;
+                h1 {
+                    font-size: 30px;
+                    letter-spacing: 15px;
+                }
+            }
+        }
+    }
+    @media(max-width: 400px){
+        .hero {
+            min-height: 400px;
+        }
     }
         
 }
