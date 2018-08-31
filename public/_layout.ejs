@@ -76,6 +76,30 @@
     <script src="/assets/javascripts/lib/url/url.min.js"></script>
     <script src="/assets/javascripts/i18n.js" async defer></script>
 
+    <% if(bodyclass == "home") { %>
+      <script>
+        // Instantiate the Bootstrap carousel
+      $('.multi-item-carousel').carousel({
+        interval: false
+      });
+      // for every slide in carousel, copy the next slide's item in the slide.
+      // Do the same for the next, next item.
+      $('.multi-item-carousel .item').each(function(){
+        var next = $(this).next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+        
+        if (next.next().length>0) {
+          next.next().children(':first-child').clone().appendTo($(this));
+        } else {
+          $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
+      });
+      </script>
+    <% } %>
+
     <% if(bodyclass == "facility-gallery" || bodyclass == "school-gallery") { %>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
@@ -84,8 +108,6 @@
         $.fancybox.defaults.transitionEffect = "fade";
         $.fancybox.defaults.infobar = false;
         $.fancybox.defaults.toolbar = false;
-
-        
       </script>
     <% } %>
 
