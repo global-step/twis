@@ -33,8 +33,8 @@
   <div class="row news-row">
     <div class="block background--white heading--blue">
       <h2>Latest News</h2>
-      <div class="news"></div>
-      <a href="/news" class="more">See all news <img class="arrow" src="/assets/images/arrow-blue.svg"/></a>
+      <div class="news"><div class="news-item"><p class="date">2018-06-07<span>News</span></p><p class="content">An international school will newly open in April 2019 along with Honda Keisuke’s KSK group. We have published the press release on PR TIMES.</p><a>Read More <img src="/assets/images/arrow-blue.svg"></a></div><div class="news-item"><p class="date">2018-05-28<span>News</span></p><p class="content">GSA Summer School will be held in Ichigawa, Tachikawa, Hachioji, and Chuorinkan.</p><a>Read More <img src="/assets/images/arrow-blue.svg"></a></div><div class="news-item"><p class="date">2018-05-20<span>News</span></p><p class="content">Tokyo Global Summer School 2018 where students can enjoy experiencing a real American summer school with American kids will open this summer. </p><a>Read More <img src="/assets/images/arrow-blue.svg"></a></div></div>
+      <!-- <a href="/news" class="more">See all news <img class="arrow" src="/assets/images/arrow-blue.svg"/></a> -->
     </div>
   </div>
 
@@ -209,29 +209,29 @@
   </div>
 
   <script>
-    fetch('https://www.gsacademy.com/api/v1/news/headlines.json?brand_id=2', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-    })
-    .then((response) => {
-      return response.text();
-    })
-    .then((data) => {
-      news = JSON.parse(data)
-      for(var i = 0; i < 3; i++){
-        $('.news').append( 
-          '<div class="news-item">' +
-            '<p class="date">'+news[i].date+'<span>News</span></p>'+
-            '<p class="content">'+news[i].content+'</p>'+
-            '<a>Read More <img src="/assets/images/arrow-blue.svg"/></a>'+
-          '</div>'
-        )
-      }
-      console.log(news)
-    })
+    // fetch('https://www.gsacademy.com/api/v1/news/headlines.json?brand_id=2', {
+    //   method: 'GET',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    // })
+    // .then((response) => {
+    //   return response.text();
+    // })
+    // .then((data) => {
+    //   news = JSON.parse(data)
+    //   for(var i = 0; i < 3; i++){
+    //     $('.news').append( 
+    //       '<div class="news-item">' +
+    //         '<p class="date">'+news[i].date+'<span>News</span></p>'+
+    //         '<p class="content">'+news[i].content+'</p>'+
+    //         '<a>Read More <img src="/assets/images/arrow-blue.svg"/></a>'+
+    //       '</div>'
+    //     )
+    //   }
+    //   console.log(news)
+    // })
   </script>
 
 <div id="fb-root"></div>

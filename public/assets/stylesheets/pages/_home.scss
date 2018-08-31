@@ -440,8 +440,23 @@
       background-size: cover;
       font-size: 27px;
       font-weight: 700;
+      position: relative;
       span{display: block}
-      p {margin: inherit;}
+      p {margin: inherit; position: relative;z-index: 9;}
+      &:before{
+        content: '';
+        background: $midblue;
+        opacity: 0.6;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: $base-duration $base-timing;
+      }
+      &:nth-of-type(3n+1):before{
+          background: $lightblue;
+      }
       @media(max-width: 992px){
         width: 100%;
         display: block;

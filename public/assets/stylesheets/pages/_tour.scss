@@ -80,12 +80,28 @@
             background-size: cover;
             font-size: 27px;
             font-weight: 700;
-            span{display: block}
+            position: relative;
+            span{display: block};
+            p{z-index: 9; position: relative; margin-top: 40px;}
+            &:before{
+                content: '';
+                background: $midblue;
+                opacity: 0.6;
+                width: 100%;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: $base-duration $base-timing;
+            }
+            &:nth-of-type(3n+1):before{
+                background: $lightblue;
+            }
             @media(max-width: 992px){
-            width: 100%;
-            display: block;
-            margin: 40px auto;
-            height: 220px;
+                width: 100%;
+                display: block;
+                margin: 40px auto;
+                height: 220px;
             }
         }
     }
