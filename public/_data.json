@@ -74,5 +74,9 @@
   "boost-program": {
     "bodyclass": "boost-program",
     "template": "default"
+  },
+  "educational-leadership-members": {
+    "bodyclass": "educational-leadership-members",
+    "template": "default"
   }
 }
