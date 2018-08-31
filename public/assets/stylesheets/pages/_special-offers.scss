@@ -13,7 +13,7 @@
             width: 32px;
             transition: bottom $base-duration $base-timing;
             transform: rotate(90deg);
-            position: absolute;
+            position: absolute;font-size: 38px;
             left: 0; right: 0;
             margin: auto;
             bottom: 60px;
@@ -52,12 +52,15 @@
         }
         h3, a, p{z-index: 99; position: relative; display: block;}
         h3{
-            padding-top: 100px;
+            padding-top: 190px;
             font-size: 38px;
             margin-bottom: 30px;
             transition: $base-duration $base-timing; 
+            @media(max-width: 1024px){
+               padding-top: 100px; 
+            }
         }
-        p{font-size: 18px; transition: margin $base-duration $base-timing; }
+        p{font-size: 18px; font-weight: bold; transition: margin $base-duration $base-timing; }
         a{
             &:hover img{animation: slide .5s cubic-bezier(0.39, 0.58, 0.57, 1) infinite alternate;}
             img{
@@ -85,10 +88,15 @@
         }
         &:hover{
             .reveal{
-                opacity: 1; max-height: 300px;
+                opacity: 1; 
+                max-height: 300px;
+                &:hover {
+                    color: #000 !important;
+                }
             }
             p.reveal{
-                margin-bottom: 20px;    
+                margin-bottom: 20px;
+                font-size: 14px;
             }
             p:first-of-type{margin-bottom: 100px; }  
             a{margin-top: 90px; }
