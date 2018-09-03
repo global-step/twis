@@ -93,7 +93,7 @@
       vertical-align: top;
       background: #fcfcfc;
       margin: 0 25px 30px 0;
-      box-shadow: 3px 3px 12px 2px #b5b4b43b;
+      box-shadow: 5px 5px 20px 0px #b5b4b43b;
       width: calc(100% / 3 - 20px);
       padding: 25px;
       min-height: 225px;
@@ -105,6 +105,7 @@
       }
       .content{
         min-height: 90px;
+        font-style: italic;
       }
       a{
         color: $lightblue;
@@ -335,41 +336,7 @@
       }
     }
   }
-  .multi-item-carousel{
-    .carousel-inner{
-      > .item{
-        transition: 500ms ease-in-out left;
-      }
-      .active{
-        &.left{
-          left:-33%;
-        }
-        &.right{
-          left:33%;
-        }
-      }
-      .next{
-        left: 33%;
-      }
-      .prev{
-        left: -33%;
-      }
-      @media all and (transform-3d), (-webkit-transform-3d) {
-        > .item{
-          // use your favourite prefixer here
-          transition: 500ms ease-in-out left;
-          transition: 500ms ease-in-out all;
-          backface-visibility: visible;
-          transform: none!important;
-        }
-      }
-    }
-    .carousel-control{
-      &.left, &.right{
-        background-image: none;
-      }
-    }
-  }
+
   .testimonials{
     .testimonial-item{
       display: inline-block;
@@ -399,13 +366,15 @@
       }
       a{
         margin: 30px 0;
+        img{transition: .3s ease-in-out}
       }
     }
     @media (max-width: 992px) {
       .testimonial-item{
         width: 100%;
-        margin: 0;
-        padding: 0 0 80px;
+        max-width: 300px;
+        margin: 40px auto 0;
+        padding: 0;
       }
     }
   }

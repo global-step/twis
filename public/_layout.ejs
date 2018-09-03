@@ -8,6 +8,12 @@
     <meta name="description" content="<%= description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <% if(bodyclass == "home") { %>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <% } %>
+
     <link rel="stylesheet" href="/assets/stylesheets/application.css">
     
     <meta property="og:title" content="Tokyo West">
@@ -77,26 +83,28 @@
     <script src="/assets/javascripts/i18n.js" async defer></script>
 
     <% if(bodyclass == "home") { %>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
       <script>
-        // Instantiate the Bootstrap carousel
-      $('.multi-item-carousel').carousel({
-        interval: false
+      
+      $('.multiple-items').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       });
-      // for every slide in carousel, copy the next slide's item in the slide.
-      // Do the same for the next, next item.
-      $('.multi-item-carousel .item').each(function(){
-        var next = $(this).next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-        
-        if (next.next().length>0) {
-          next.next().children(':first-child').clone().appendTo($(this));
-        } else {
-          $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
-      });
+
       </script>
     <% } %>
 
@@ -109,6 +117,57 @@
         $.fancybox.defaults.infobar = false;
         $.fancybox.defaults.toolbar = false;
       </script>
+    <% } %>
+
+    <% if(bodyclass == "contact") { %>
+    <script>
+
+    $('form .btn').prop('disabled', true);
+    $('input[type="text"]').keyup(function() {
+      if($(this).val() != '' && $('input[type="number"]').val() != '') {
+        $('form .btn').prop('disabled', false);
+      } 
+    });
+    
+    $("form").submit(function(e){
+        return false;
+    });
+
+    function sendMessage(){
+      let form = new FormData();
+      form.append("name", $('input[name="first_name"]').val() );
+      form.append("email", $('input[name="number"]').val() );
+      form.append("subject", $('input[name="subject"]').val() );
+      form.append("message",  
+        $('input[name="first_name"]').val() + '\n' +
+        $('input[name="surname"]').val() + '\n' +
+        $('input[name="name_2"]').val() + '\n' +
+        $('input[name="number"]').val() + '\n' +
+        $('input[name="inquiry"]').val()
+      );
+
+      fetch('http://localhost:3000/api/v1/contact/mail', {
+        method: 'post',
+        body: form
+      })
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        if(data.toString().length > 1){
+          console.log(data)
+          $('form .btn').prop('disabled', true);
+          // $('form .btn').hide()
+          $('form').append('<h4 class="center">Message Sent</h4>')
+        }
+      })
+      .catch((error) => {
+        if(error.toString().length > 1){
+          console.log('error')
+        }
+      })
+    }
+    </script>
     <% } %>
 
   </body>
