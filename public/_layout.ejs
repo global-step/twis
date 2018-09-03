@@ -136,12 +136,12 @@
     function sendMessage(){
       let form = new FormData();
       form.append("name", $('input[name="first_name"]').val() );
-      form.append("email", $('input[name="number"]').val() );
+      form.append("email", $('input[name="email"]').val() );
       form.append("subject", $('input[name="subject"]').val() );
       form.append("message",  
         $('input[name="first_name"]').val() + '\n' +
         $('input[name="surname"]').val() + '\n' +
-        $('input[name="name_2"]').val() + '\n' +
+        $('input[name="email"]').val() + '\n' +
         $('input[name="number"]').val() + '\n' +
         $('input[name="inquiry"]').val()
       );
@@ -157,8 +157,7 @@
         if(data.toString().length > 1){
           console.log(data)
           $('form .btn').prop('disabled', true);
-          // $('form .btn').hide()
-          $('form').append('<h4 class="center">Message Sent</h4>')
+          $('form .btn').html('Message Sent').css('background', '#05de71')
         }
       })
       .catch((error) => {
