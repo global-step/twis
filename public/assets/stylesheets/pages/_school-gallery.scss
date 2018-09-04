@@ -41,12 +41,13 @@
     }
     .fancybox-navigation{
         background: white;
-        width: 60%;
-        height: 60%;
         left: 0;
         right: 0;
         margin: auto;
-        top: 210px;
+        top: 17%;
+        width: 60%;
+        max-width: 800px;;
+        height: 64%;
         position: absolute;
         transition: .2s cubic-bezier(.5,0,.14,1);
         opacity: 0;
@@ -104,6 +105,7 @@
     }
 
     @media(max-width: 991px){
+        .fancybox-container{display: none;}
         .gallery{
             margin-top: 0;
             padding: 0px 40px;
