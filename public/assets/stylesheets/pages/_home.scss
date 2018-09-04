@@ -354,17 +354,27 @@
         @include font-size(26px);
         font-weight: 700;
       }
-      p:first-of-type{color: $light-grey; @include font-size(12px)}
+      p:first-of-type{color: $light-grey; @include font-size(12px); display: block; margin-bottom: 20px;}
       p{
         line-height: 1.7;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        &.reveal{
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: $base-duration $base-timing;
+        }
+      }
+      &.open p.reveal{
+        max-height: 500px;
+        opacity: 1;
       }
       img{
         width: 200px;
         display: block;
         margin: 0 auto;
       }
-      a{
+      span{
         margin: 30px 0;
         img{transition: .3s ease-in-out}
       }

@@ -64,5 +64,14 @@ $( document ).ready(function() {
     console.log($(this))
   })
 
+  $('.testimonial-item span').click(function(){
+    $(this).parent().toggleClass('open')
+    if($(this).text() == 'Read Less'){
+      $(this).html('Read More <img class="arrow" src="/assets/images/arrow-blue.svg"/>')
+    } else {
+      $(this).html('Read Less')
+    }
+  })
+
 }); //eo:doc ready
  
