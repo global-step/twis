@@ -9,7 +9,7 @@
         background-size: 100%;
         background-position: center 100px;
         margin-bottom: 120px;
-        min-height: 580px;
+        min-height: 520px;
         
         @media(max-width: 1100px){
             background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Contact+Us/header-mobile.jpg');
@@ -57,7 +57,7 @@
                     border-bottom: 2px solid #2fa4bd;
                 }
                 &::placeholder {
-                    color: #a19f9fa1;
+                    color: #5a5a5a;
                 }
             }
             .btn{
@@ -122,7 +122,7 @@
             }
         }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
         .hero {
             position: relative;
             min-height: 360px;
