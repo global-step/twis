@@ -158,12 +158,13 @@
         if(data.toString().length > 1){
           console.log(data)
           $('form .btn').prop('disabled', true);
-          $('form .btn').html('Message Sent').css('background', '#05de71')
+          $('form .btn').html('<img src="/assets/images/tick.svg"/> Message Sent').css('background', '#08b90c')
         }
       })
       .catch((error) => {
         if(error.toString().length > 1){
           console.log('error')
+          $('form .btn').html('Error, please refresh the page').css('background', 'crimson')
         }
       })
     }

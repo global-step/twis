@@ -60,7 +60,14 @@
                     color: #a19f9fa1;
                 }
             }
-            .btn{outline: none;}
+            .btn{
+                outline: none;
+                img{
+                    width: 23px;
+                    margin-right: 12px;
+                    margin-top: -3px;
+                }
+            }
             h4{
                 margin-top: 50px;
                 font-size: 22px;
