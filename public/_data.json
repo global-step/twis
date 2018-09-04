@@ -75,6 +75,10 @@
     "bodyclass": "boost-program",
     "template": "default"
   },
+  "privacy-policy": {
+    "bodyclass": "privacy-policy",
+    "template": "default"
+  },
   "educational-leadership-members": {
     "bodyclass": "educational-leadership-members",
     "template": "default"
