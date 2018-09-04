@@ -56,9 +56,9 @@
             background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/close.svg') no-repeat;
             position: absolute;
             top: 30px;
-            right: 30px;
-            height: 38px;
-            width: 38px;
+            right: 26px;
+            width: 34px;
+            height: 34px;
             cursor: pointer;
         }
         .fancybox-button{
@@ -66,6 +66,8 @@
             visibility: visible;
             background: transparent;
             padding: 0;
+            width: 34px;
+            height: 34px;
             &.fancybox-button--arrow_right{
                 right: 30px;
                 background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-right.svg') no-repeat;
