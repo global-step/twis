@@ -31,7 +31,6 @@
 
 body {
   @include font-family();
-  letter-spacing: 1px;
   @include font-size($base-font-size);
   line-height: $base-line-height;
 }
