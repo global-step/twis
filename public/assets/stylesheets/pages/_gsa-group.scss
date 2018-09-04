@@ -24,7 +24,7 @@
             float: right;
             background: #fff;
             margin: 20px 0;
-            padding: 20px 40px;
+            padding: 20px 25px;
             width: 500px;
             height: 500px;
             color: #000;
@@ -33,7 +33,16 @@
             position: relative;
         }
         .blue{color: #2f5ebd; font-weight: 700;}
-        p{text-align: left; display: block; clear: both;}
+        p{
+            text-align: left; 
+            display: block; 
+            clear: both;
+            font-size: 14px;
+            line-height: 1.8;
+            &.main {
+               margin-bottom: 50px;
+            }
+        }
         a{
             background: #2fa4bd;
             color: #fff;
@@ -50,8 +59,15 @@
         ul{
             text-align: left;
             list-style-type: none;
+            letter-spacing: 0;
+            font-size: 14px;
+            padding: 0;
+            line-height: 2;
             &:last-of-type{margin-bottom: 30px;}
             li{padding-left: 0; margin-left: 0;}
+            @media(max-width: 768px){
+                margin: 0;
+            }
         }
         @media(max-width: 1200px){
             .side{
@@ -62,7 +78,7 @@
             }
             // background-image: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/Home+Page/header_mobile.jpg');
         }
-        @media(max-width: 500px){
+        @media(max-width: 768px){
             .side{
                 width: 85%;
                 height: initial;
