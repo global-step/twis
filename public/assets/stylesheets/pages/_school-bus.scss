@@ -10,16 +10,22 @@
         background-position: center 100px;
         min-height: 87vh;
         .hero__content{
-            top: 50%;
+            top: 58%;
             width: 80%;
             h1{
                 font-size: 28px;
                 line-height: 2.5;
                 span{display: block}
             }
+            @media(max-width: 1600px){
+                top: 60%;
+                h1{
+                    font-size: 22px;
+                }
+            }
         } 
         img{
-            width: 32px;
+            width: 22px;
             transition: bottom $base-duration $base-timing;
             transform: rotate(90deg);
             position: absolute;
@@ -30,20 +36,23 @@
             cursor: pointer;
         }
         @media(max-width: 1100px){
-            min-height: 70vh;
-            .hero__content{top: 275px;}
+            min-height: 80vh;
+            .hero__content{top: 340px;}
         }
         @media(max-width: 991px){
             height: 700px;
             .hero__content{
-                top: 210px;
                 width: 100%;
                 h1{
-                    font-size: 16px;
+                    font-size: 18px;
+                    font-weight: 500;
                     line-height: 2.5;
                     span{margin-bottom: 20px;}
                 }
             } 
+        }
+        @media(max-width: 500px){
+            .hero__content{top: 210px;}
         }
     }
     @keyframes bounce{
@@ -71,7 +80,7 @@
         padding: 80px 40px;
         h3, a, p{z-index: 99; position: relative; display: block;}
         h3{
-            padding-top: 100px;
+            padding-top: 230px;
             font-size: 38px;
             margin-bottom: 30px;
             letter-spacing: 5px;
@@ -105,6 +114,9 @@
                 color: #b9b9b9;
                 margin-left: 10px;
             }
+            @media(max-width: 500px){
+                font-size: 14px;
+            }
         }
         .time{
             span{
@@ -120,7 +132,7 @@
                 width: 20px;
                 left: 10px;
                 transform: rotate(90deg);
-                top: 0;
+                top: 20px;
                 opacity: 0.5;
             }
             .right{
@@ -168,7 +180,7 @@
             }
             // p:first-of-type{margin-bottom: 100px; }  
             a{margin-top: 90px; }
-            h3{padding-top: 40px;}
+            h3{padding-top: 36px;}
             &:before{opacity: .95;}
         }
     }
