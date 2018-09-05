@@ -24,24 +24,19 @@ footer.site-footer{
     }
   }
   p{z-index: 10;position: relative;}
-  .btn-box {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px 14%;
-    .login-btn {
-      padding: 10px 20px;
-      background-color: #299ba5;
-      color: #fff;
-      border-radius: 30px;
-      font-size: 11px;
-      letter-spacing: 1px;
-      img {
-        width: 20px;
-        margin-right: 5px;
-        bottom: 2px;
-        position: relative;
-      }
+  .login-btn {
+    padding: 10px 20px;
+    background-color: #299ba5;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-left: 1em;
+    img {
+      width: 20px;
+      margin-right: 5px;
+      bottom: 2px;
+      position: relative;
     }
   }
 
