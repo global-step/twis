@@ -558,6 +558,7 @@
       font-size: 27px;
       font-weight: 700;
       position: relative;
+      transition: $base-duration $base-timing;
       span{display: block}
       p {margin: inherit; position: relative;z-index: 9;}
       &:hover {
