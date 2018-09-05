@@ -450,6 +450,9 @@
       &.slick-next {
         background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-right.svg') no-repeat;
       }
+      @media (max-width: 768px) {
+        display: none !important;
+      }
     }
     .slick-arrow:before {
       content: "";
