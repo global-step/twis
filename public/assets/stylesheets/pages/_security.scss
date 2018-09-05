@@ -21,7 +21,7 @@
                 letter-spacing: 15px;
             }
         }
-        .contact-semi.open{
+        .contact-semi:hover{
             height: 420px;
             width: 520px;
             right: -140px;
@@ -72,7 +72,7 @@
             margin: 20px auto;
             display: block;
         };
-        p{font-size: 14px;}
+        p{font-size: 14px; text-align: justify;}
         img{
             width: 80px;
             display: block;

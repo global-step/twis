@@ -34,7 +34,7 @@
       color: #ffffff !important;
       @include font-size(22px);
       transition: transform $base-duration $base-timing, filter $base-duration $base-timing;
-      p{margin-top: 20px; text-align: center;}
+      p{margin-top: 25px; text-align: center;}
       &:hover{
         transform: scale(1.1);
         text-decoration: none;
@@ -78,6 +78,7 @@
     padding: 0 90px;
     @media(max-width: 992px){
       padding: 0 40px;
+      margin: 50px auto;
       &.partners {margin-bottom: 0;}
     }
   }
@@ -122,6 +123,7 @@
         background: $lightblue;
         color: $light;
         text-transform: uppercase;
+        font-size: 10px;
       }
     }
     @media(max-width: 992px){
@@ -231,6 +233,7 @@
       }
       &:nth-of-type(even):before{ background: $midblue}
       a,p,h3{position: relative; z-index: 2; text-align: center; display: block;}
+      h3 {font-weight: 500;}
       p{
         font-size: 14px;
         line-height: 1.8;
@@ -396,7 +399,7 @@
     .testimonial-item{
       display: inline-block;
       vertical-align: top;
-      padding: 35px;
+      padding: 35px 12%;
       transition: $base-duration $base-timing;
       text-align: center;
       margin-right: 10px;
@@ -447,7 +450,7 @@
   .social{
     padding: 0;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     .block{height: 340px;}
     .fb-page{
       margin: 0 50px;
@@ -475,6 +478,9 @@
         transition: $base-duration $base-timing;
         &:hover{
           opacity: 1;
+        }
+        &.insta-icon {
+          margin-right: 19px;
         }
       }
     }
@@ -511,6 +517,9 @@
       position: relative;
       span{display: block}
       p {margin: inherit; position: relative;z-index: 9;}
+      &:hover {
+        opacity: 0.6;
+      }
       &:before{
         content: '';
         background: $midblue;
@@ -556,6 +565,9 @@
         width: auto;
         margin-bottom: 50px;
         display: block;
+        &:last-of-type {
+          margin-bottom: 10px;
+        }
       }
     }
     @media(max-width: 992px){
