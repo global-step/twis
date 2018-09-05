@@ -44,24 +44,12 @@
     
     .offer-1, .offer-2{
         background-size: cover;
+        background-position: center;
         transition: $base-duration $base-timing;
         color: #fff;
         min-height: 640px;
         text-align: center;
         padding: 80px 40px;
-        @media(max-width: 1100px){
-            min-height: 480px;
-            .reveal{display: none !important;}
-            &:hover{
-                h3{padding-top: 100px !important}
-                p:first-of-type{margin-bottom: 20px !important; } 
-            }
-            &.open + .mobile-reveal{
-                min-height: 480px;
-                max-height: 500px;
-                padding: 180px 40px 80px;
-            }
-        }
         h3, a, p{z-index: 99; position: relative; display: block;}
         h3{
             padding-top: 190px;
@@ -124,6 +112,51 @@
             a{margin-top: 90px; }
             h3{padding-top: 40px;}
             &:before{opacity: .95;}
+        }
+        @media(max-width: 1100px){
+            min-height: 480px;
+            p:first-of-type{margin-bottom: 20px !important; } 
+            .mobile.close{
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                height: 38px;
+                width: 38px;
+                opacity: 0;
+                transition: $base-duration $base-timing;
+                cursor: pointer;
+            }
+            &:hover{
+                // h3{padding-top: 100px !important}
+                // p:first-of-type{margin-bottom: 20px !important; } 
+                .reveal{
+                    opacity: 0; 
+                    max-height: 0;
+                }
+                p.reveal{
+                    margin-bottom: 0;
+                    font-size: 14px;
+                }
+                a{margin-top: 90px; }
+                h3{padding-top: 40px;}
+                &:before{opacity: .9;}
+            }
+            &.open{
+                .reveal{
+                    opacity: 1; 
+                    max-height: 300px;
+                }
+                p.reveal{
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                }
+                p:first-of-type{margin-bottom: 100px; }  
+                .mobile.close{opacity: 1;}
+                a{margin-top: 90px; }
+                h3{padding-top: 40px;}
+                &:before{opacity: .95;}
+            }
         }
     }
     .offer-1{
