@@ -295,7 +295,7 @@
       h3{
         @include font-size(36px);
         letter-spacing: 4px;
-        padding-top: 170px; 
+        padding-top: 200px; 
         transition: $base-duration $base-timing;
       }
       &:hover{
@@ -307,9 +307,6 @@
       }
     }
     .mobile{display: none}
-    @media (min-width: 1300px) {
-      .program-item{min-height: 500px;}
-    }
     @media (max-width: 1100px) {
       .desktop{display: none;}
       .mobile{display: block}
@@ -439,6 +436,27 @@
   }
 
   .testimonials{
+    .slick-arrow {
+      content: "";
+      opacity: 1;
+      visibility: visible;
+      background: transparent;
+      padding: 0;
+      width: 34px;
+      height: 34px;
+      &.slick-prev {
+        background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-left.svg') no-repeat;
+      } 
+      &.slick-next {
+        background: url('https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Gallery/arrow-right.svg') no-repeat;
+      }
+      @media (max-width: 768px) {
+        display: none !important;
+      }
+    }
+    .slick-arrow:before {
+      content: "";
+    }
     .testimonial-item{
       display: inline-block;
       vertical-align: top;
