@@ -130,14 +130,14 @@
             .left, .right{
                 position: absolute;
                 width: 20px;
-                left: 10px;
+                left: 8px;
                 transform: rotate(90deg);
                 top: 20px;
                 opacity: 0.5;
             }
             .right{
                 left: initial;
-                right: 10px;
+                right: 8px;
                 transform: rotate(-90deg);
             }
         }

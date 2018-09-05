@@ -36,6 +36,9 @@
                 h1{font-size: 30px;}
             }
         }
+        @media(max-width: 321px){
+            min-height: 108vh;
+        }
     }
 
     @keyframes bounce{
