@@ -152,6 +152,18 @@
             top: 0;
             transition: $base-duration $base-timing;
         }
+        &:hover{
+            .reveal{
+                opacity: 1; max-height: 300px;
+            }
+            p.reveal{
+                margin-bottom: 20px;    
+            }
+            // p:first-of-type{margin-bottom: 100px; }  
+            a{margin-top: 90px; }
+            h3{padding-top: 36px;}
+            &:before{opacity: .95;}
+        }
         @media(max-width: 991px){
             height: 530px;
             padding: 0 40px;
@@ -169,19 +181,25 @@
             h3{
                 padding-top: 220px;
             }
-        }
-        
-        &:hover{
-            .reveal{
-                opacity: 1; max-height: 300px;
+            &:hover{
+                .reveal{opacity: 0; max-height: 0;
+                }
+                p.reveal{margin-bottom: 0;}
+                a{margin-top: 0; }
+                h3{padding-top: 220px;}
+                &:before{opacity: .95;}
             }
-            p.reveal{
-                margin-bottom: 20px;    
+            &.open{
+                .reveal{
+                    opacity: 1; max-height: 300px;
+                }
+                p.reveal{
+                    margin-bottom: 20px;    
+                }
+                a{margin-top: 90px; }
+                h3{padding-top: 36px;}
+                &:before{opacity: .95;}
             }
-            // p:first-of-type{margin-bottom: 100px; }  
-            a{margin-top: 90px; }
-            h3{padding-top: 36px;}
-            &:before{opacity: .95;}
         }
     }
     .hachioji{background-image: url(https://cdn.gsacademy.com/Tokyo+West+Elementary/School+Bus/01.jpg);}

@@ -33,7 +33,7 @@ $( document ).ready(function() {
     $("html, body").animate({ scrollTop: heroHeight.toString() + "px" }, "slow");
   })
 
-  $('.offer-1, .offer-2').click(function(){
+  $('.offer-1, .offer-2, .hachioji, .machida, .yokota, .tachikawa').click(function(){
     $(this).toggleClass('open');
   })
 
