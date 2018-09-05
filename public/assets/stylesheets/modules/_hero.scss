@@ -146,6 +146,25 @@
     animation: slide .8s ease-in forwards;
     &:hover{
       filter: brightness(1.1);
+      height: 600px;
+      width: 770px;
+      right: -390px;
+      top: 20%;
+      img{transform: rotate(0deg) translate3d(-10px,240px,0); }
+      > p{display: none;}
+      .contact{
+        img{width: 15px; margin-right: 10px; margin-bottom: -3px; opacity: 0.5; position: relative; transform: none; top: initial;}
+        p{
+          margin-bottom: 50px;
+          writing-mode: initial;
+          text-align: left;
+          font-size: 12px;
+          letter-spacing: 1px;
+          filter: brightness(0.9);
+          transition: $slow $base-timing;
+          &:hover{filter: brightness(1.2); img{opacity: 1; }}
+        }
+      }
     }
     p{
       writing-mode: tb-rl;
@@ -166,27 +185,6 @@
       font-size: 0; 
       margin: auto 0;
       img{width: 0; opacity: 0;position: relative; transform: none; top: initial; left: initial; transition: opacity $slow $base-timing;}
-    }
-    &.open{
-        height: 600px;
-        width: 770px;
-        right: -390px;
-        top: 20%;
-        img{transform: rotate(0deg) translate3d(-10px,240px,0); }
-        > p{display: none;}
-      .contact{
-        img{width: 15px; margin-right: 10px; margin-bottom: -3px; opacity: 0.5; position: relative; transform: none; top: initial;}
-        p{
-          margin-bottom: 50px;
-          writing-mode: initial;
-          text-align: left;
-          font-size: 12px;
-          letter-spacing: 1px;
-          filter: brightness(0.9);
-          transition: $slow $base-timing;
-          &:hover{filter: brightness(1.2); img{opacity: 1; }}
-        }
-      }
     }
     @media(max-width: 1100px){display: none;}
   }
