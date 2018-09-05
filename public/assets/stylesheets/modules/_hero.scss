@@ -149,7 +149,7 @@
       width: 770px;
       right: -390px;
       top: 20%;
-      img{transform: rotate(0deg) translate3d(-10px,240px,0); }
+      img{-webkit-transform: scaleX(-1); transform: scaleX(-1); top: 270px;}
       > p{display: none;}
       .contact{
         img{width: 15px; margin-right: 10px; margin-bottom: -3px; opacity: 0.5; position: relative; transform: none; top: initial;}
@@ -172,12 +172,12 @@
       letter-spacing: 7px;
     }
     img{
-      transform: translate3d(0,65px,0) rotate(180deg);
       transform-origin: left;
       position: absolute;
       left: 0;
       width: 15px;
       left: 37px;
+      top: 100px;
       transition: $slow $base-timing;
     }
     .contact{
