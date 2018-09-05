@@ -177,10 +177,28 @@
       padding: 40px;
       overflow: auto;
       font-size: 14px;
+      .row{
+        margin: 20px auto;
+        .col-12{
+          padding: 0 20px;
+        }
+      }
+      table{
+        border-top: 1px solid #d4d4d4;
+        border-left: 1px solid #d4d4d4;
+        tr {
+            border-bottom: 1px solid #d4d4d4;
+        }
+        th,td{
+          border-right: 1px solid #d4d4d4;
+          text-align: center;
+          padding: 30px 10px;
+        }
+      }
       .blue{
         font-weight: 700;
         color: #2f5ebd;
-        margin-bottom: 5px;
+        margin-bottom: 7px;
       }
     }
   }
