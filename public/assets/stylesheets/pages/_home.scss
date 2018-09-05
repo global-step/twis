@@ -156,11 +156,16 @@
     border-radius: 0;
     border: 0;
     box-shadow: none;
-    margin-top: 140px;
+    margin: 140px auto;
     .heading--white{
       background: #2f5ebd;
       padding: 68px 20px;
-      h3{margin: 0; letter-spacing: 3px;}
+      h3{
+        margin: 0; 
+        letter-spacing: 3px;
+        br{display: none;}
+        
+      }
       .close{
         display: block;
         position: absolute;
@@ -172,6 +177,15 @@
         transition: $base-duration $base-timing;
         cursor: pointer;
       }
+      @media(max-width: 991px){
+        padding: 48px 20px;
+        h3{
+          font-size: 16px;
+          line-height: 2;
+          br{display: block}
+        }
+        
+      }
     }
     .wrap{
       background: #ffffff;
@@ -181,12 +195,27 @@
       .row{
         margin: 20px auto;
         .col-12{
-          padding: 0 20px;
+          padding: 0 20px; 
+          a{
+            color: #2fa4bd;
+            text-decoration: underline;
+          }
+        }
+        .btn{
+          background: #2fa4bd;
+          padding: 12px;
+          margin: 80px auto 0;
+          display: block;
+          border-radius: 30px;
+          font-weight: 700;
+          width: 200px;
         }
       }
       table{
         border-top: 1px solid #d4d4d4;
         border-left: 1px solid #d4d4d4;
+        margin: 40px auto 70px;
+        width: 90%;
         tr {
             border-bottom: 1px solid #d4d4d4;
         }
@@ -200,6 +229,20 @@
         font-weight: 700;
         color: #2f5ebd;
         margin-bottom: 7px;
+      }
+      @media(max-width: 991px){
+        padding: 0;
+        .row{
+          .col-12{
+            padding: 0;
+          }
+          .btn{
+            margin: 40px auto 20px;
+          }
+        }
+        table{
+          th,td{padding: 15px 10px;}
+        }
       }
     }
   }
@@ -530,6 +573,7 @@
       font-size: 27px;
       font-weight: 700;
       position: relative;
+      transition: $base-duration $base-timing;
       span{display: block}
       p {margin: inherit; position: relative;z-index: 9;}
       &:hover {
