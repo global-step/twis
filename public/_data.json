@@ -1,85 +1,106 @@
 {
   "about": {
+    "top_title": "About",
     "bodyclass": "about",
     "template": "default"
   },
   "educational-policy": {
+    "top_title": "Educational Policy",
     "bodyclass": "educational-policy",
     "template": "default"
   },
   "special-offers": {
+    "top_title": "Special Offers",
     "bodyclass": "special-offers",
     "template": "default"
   },
   "faculty-members": {
+    "top_title": "Faculty Members",
     "bodyclass": "faculty-members",
     "template": "default"
   },
   "yearly-schedule": {
+    "top_title": "Yearly Schedule",
     "bodyclass": "yearly-schedule",
     "template": "default"
   },
   "daily-schedule": {
+    "top_title": "Daily Schedule",
     "bodyclass": "daily-schedule",
     "template": "default"
   },
   "classes": {
+    "top_title": "Classes",
     "bodyclass": "classes",
     "template": "default"
   },
   "club": {
+    "top_title": "Club",
     "bodyclass": "club",
     "template": "default"
   },
   "curriculum": {
+    "top_title": "Curriculum",
     "bodyclass": "curriculum",
     "template": "default"
   },
   "gsa-group": {
+    "top_title": "GSA Group",
     "bodyclass": "gsa-group",
     "template": "default"
   },
   "contact": {
+    "top_title": "Contact",
     "bodyclass": "contact",
     "template": "default"
   },
   "tour": {
+    "top_title": "Tour",
     "bodyclass": "tour",
     "template": "default"
   },
   "steps-to-enrolment": {
+    "top_title": "Steps to Enrolment",
     "bodyclass": "steps-to-enrolment",
     "template": "default"
   },
   "tuition": {
+    "top_title": "Tuition",
     "bodyclass": "tuition",
     "template": "default"
   },
   "school-bus": {
+    "top_title": "School Bus",
     "bodyclass": "school-bus",
     "template": "default"
   },
   "school-gallery": {
+    "top_title": "School Gallery",
     "bodyclass": "school-gallery",
     "template": "default"
   },
   "facility-gallery": {
+    "top_title": "Facility Gallery",
     "bodyclass": "facility-gallery",
     "template": "default"
   },
   "security": {
+    "top_title": "Security",
     "bodyclass": "security",
     "template": "default"
   },
   "boost-program": {
+    "top_title": "Boost Program",
     "bodyclass": "boost-program",
     "template": "default"
   },
   "privacy-policy": {
+    "top_title": "Privacy Policy",
     "bodyclass": "privacy-policy",
     "template": "default"
   },
   "educational-leadership-members": {
+    "top_title": "Educational Leadership Members",
     "bodyclass": "educational-leadership-members",
     "template": "default"
   }
