@@ -97,7 +97,9 @@ To display the content, us EJS template tags, e.g `<%- heroTitle %>`. The `-` is
 We're also using this Metadata to build page `<title>`, `<description>` classes on `<body>` and social sharing tags.
 
 ## Deployment
+* npm install firebase
+* firebase login (optional: --no-localhost)
 * Run: `harp compile`
-* Run: `gulp js`
-* Deploy contents of `www` to chosen server
+* Run: `gulp js` (might be optional)
+* Deploy contents of `www` to chosen server (firebase deploy -p www --only hosting)
 * Profit!
