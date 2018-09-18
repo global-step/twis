@@ -100,16 +100,16 @@ We're also using this Metadata to build page `<title>`, `<description>` classes 
 * Run: `harp compile` and verify changes are under `www` folder
 * Run: `gulp js` (might be optional)
 
-  # Firebase
-  * npm install firebase
-    `npm install -g firebase-tools`
-  * login to firebase
-    `firebase login --no-localhost`
-    click on the url provided and log in
-      user: gsa-system@gsacademy.com
-      password: globalstep123
-    paste authorization code provided to log in  
-  * Deploy contents of `www` to chosen server 
-    `firebase deploy -p www --only hosting`
+### Firebase
+* npm install firebase
+  `npm install -g firebase-tools`
+* login to firebase
+  `firebase login --no-localhost`
+  * click on the url provided and log in
+    user: gsa-system@gsacademy.com
+    password: globalstep123
+  * paste authorization code provided to log in  
+* Deploy contents of `www` to chosen server 
+  `firebase deploy -p www --only hosting`
  
 * Profit!
