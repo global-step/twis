@@ -477,7 +477,7 @@
   "testimonial-kath-reveal": "TWIS is a great place that challenges teachers to become more effective and creative in order to encourage meaningful learning and foster globally minded, lifelong learners." ,
   "testimonial-maki": "I want to make sure that every student is able to focus on one’s learning by providing peace of mind that help is always available." ,
   "testimonial-maki-reveal": "TWIS is a friendly community of learners where everyone knows everyone. TWIS faculty and students work very closely with each other to achieve common goals and strive to grow in every aspect of school life. TWIS students are energetic, curious, and love to have fun through learning." ,
-  "news-1-date": "AUG 30 2018",
+  "news-1-date": "OCT 10 2018",
   "news-1-content": "2019 Grade 1 Admission Guidance Tokyo West International School",
   "news-2-date": "JUN 7 2018",
   "news-2-content": "An international school will newly open in April 2019 along with Honda Keisuke’s KSK group. We have published the press release on PR TIMES.",
@@ -489,6 +489,8 @@
   "newspop-blue-2": "August 30, 2018, 10:00am to 11:30am",
   "newspop-3": "Location:",
   "newspop-4": "Tokyo West International School Hachioji Campus 185 Umetsubo-machi, Hachioji city, Tokyo, Japan 192-0013",
+  "newspop-pdf-1": "September, 2019 Grade 1 Admission Guidance Tokyo West International School (EN)",
+  "newspop-pdf-2": "September, 2019 Grade 1 Admission Guidance Tokyo West International School (JP)",
   "newspop-th-1": "Session",
   "newspop-th-2": "Date and time",
   "newspop-td-1": "First Session",
@@ -506,7 +508,7 @@
   "newspop-8": "Grade 1 with 20 students",
   "newspop-9": "Reservation:",
   "newspop-10": "to make your online reservation",
-  "newspop-10-link": "Click here"
+  "newspop-10-link": "Click here ",
   "newspop-button": "Access"
   
 }
