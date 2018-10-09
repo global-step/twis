@@ -107,7 +107,6 @@ We're also using this Metadata to build page `<title>`, `<description>` classes 
   `firebase login --no-localhost`
   * click on the url provided and log in
     user: gsa-system@gsacademy.com
-    password: globalstep123
   * paste authorization code provided to log in  
 * Deploy contents of `www` to chosen server 
   `firebase deploy -p www --only hosting`
