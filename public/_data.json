@@ -103,5 +103,10 @@
     "top_title": "Educational Leadership Members",
     "bodyclass": "educational-leadership-members",
     "template": "default"
+  },
+  "employment": {
+    "top_title": "Employment",
+    "bodyclass": "employment",
+    "template": "default"
   }
 }
