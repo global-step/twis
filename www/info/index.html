@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Employment - Tokyo West International School</title>
+    <title>八王子・多摩・横田・立川のインターナショナルスクール - Tokyo West International School</title>
 
     <meta name="description" content="Tokyo West">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     
 
     <link rel="stylesheet" href="/assets/stylesheets/application.css">
@@ -35,7 +38,7 @@
     <link rel="dns-prefetch" href="//www.google-analytics.com">
   </head>
 
-  <body class="employment default">
+  <body class="home default">
     <div class="page">
       <header class="site-header">
         <div class="site-title">
@@ -107,21 +110,9 @@
         </nav>
       </header>
 
-      <div class="content-wrapper container">
-  <div class="row">
-    <div class="col-12 heading--black">
-      <h3>Employment</h3>
-      <p>If you are interested in working at our school, we encourage you to continue to check this webpage regularly; new vacancies are posted as they become available. Open CV’s can be sent to:</p>
-      <br>
-      <p>185 Umetsubo-machi, Hachioji city, Tokyo, Japan 192-0013<br><a href="mailto:admission@tokyowest.jp">admin@tokyowest.jp</a></p>
-      <br>
-      <p>Please see below for current job postings.Please note: At TWIS we receive a lot of applications each year for a limited number of positions. We apologize that we are not able to respond to each applicant individually and will only contact those whose applications we wish to pursue further.</p>
-      <br>
-      <hr>
-      <p>No job postings at the moment</p>
-    </div>
-  </div>
-</div>
+      <script>
+  document.location = "/about"
+</script>
 
       <footer class="site-footer container-fluid">
         <div class="logo">
@@ -259,6 +250,30 @@
     <script src="/assets/javascripts/lib/url/url.min.js"></script>
     <script src="/assets/javascripts/i18n.js" async defer></script>
 
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script>
+      
+      $('.multiple-items').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      </script>
     
 
     
